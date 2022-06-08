@@ -22,10 +22,10 @@ const App: React.FC = () => {
         <Bloom
           luminanceThreshold={0}
           luminanceSmoothing={0.9}
-          height={300}
+          height={200}
           opacity={2}
         />
-        <Noise opacity={0.1} />
+        <Noise opacity={0.05} />
         <Vignette eskil={false} offset={0.1} darkness={1.1} />
         <DotScreen />
       </EffectComposer>

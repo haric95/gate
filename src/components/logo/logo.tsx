@@ -6,7 +6,7 @@ import { GLTF } from "three/examples/jsm/loaders/GLTFLoader";
 
 type GLTFLogoResult = GLTF & {
   nodes: {
-    BezierCurve004: THREE.Mesh;
+    path1203: THREE.Mesh;
   };
 };
 
@@ -14,16 +14,16 @@ export const Logo: React.FC = () => {
   const logoRef = useRef<null | Object3D>(null);
 
   const { nodes: logoNodes } = useGLTF(
-    "/sodaa.glb"
+    "/gate.glb"
   ) as unknown as GLTFLogoResult;
 
   const [isMouseOver, setIsMouseOver] = useState(false);
 
   useFrame(() => {
     if (logoRef.current) {
-      logoRef.current.rotateX(0.01);
+      logoRef.current.rotateZ(0.01);
       if (isMouseOver) {
-        logoRef.current.rotateZ(0.01);
+        logoRef.current.rotateY(0.005);
       }
     }
   });
@@ -43,10 +43,10 @@ export const Logo: React.FC = () => {
         onPointerOut={() => setIsMouseOver(false)}
         ref={logoRef}
         material={isMouseOver ? wireframeMaterial : regMaterial}
-        geometry={logoNodes.BezierCurve004.geometry}
-        scale={[100, 100, 100]}
+        geometry={logoNodes.path1203.geometry}
+        scale={[5000, 5000, 5000]}
         position={[0, 0, 0]}
-        rotation={[Math.PI / 2, -Math.PI / 2, 0.3]}
+        rotation={[Math.PI / 2.5, 0, 0]}
       ></mesh>
     </>
   );
