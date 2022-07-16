@@ -170,3 +170,13 @@ $breakpoints: (
     background-color: white;
   }
 }
+
+.bg {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0px;
+  object-fit: cover;
+  background-position: center;
+  filter: brightness(0.3);
+}

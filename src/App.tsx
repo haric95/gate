@@ -13,10 +13,11 @@ import {
 const App: React.FC = () => {
   return (
     <>
+      <div className="bg" style={{ background: "url(/bg.jpeg)" }} />
       <Canvas orthographic>
         <Suspense fallback={null}>
           <Camera />
-          <color attach="background" args={[0.08, 0.08, 0.08]} />
+          {/* <color attach="background" args={[0.08, 0.08, 0.08]} /> */}
           <Logo />
         </Suspense>
         <EffectComposer>
