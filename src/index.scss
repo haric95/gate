@@ -149,3 +149,24 @@ $breakpoints: (
         + "Available breakpoints are: #{map-keys($breakpoints)}.";
   }
 }
+
+.buy-button {
+  left: 50%;
+  position: fixed;
+  top: 75%;
+  transform: translateX(-50%);
+  // border-radius: 30px;
+  cursor: pointer;
+  padding: 12px;
+  font-family: monospace;
+  color: #00ff1a;
+  border: 2px solid white;
+  background: black;
+  transform-origin: center;
+  transition: transform 0.5s linear;
+
+  &:hover {
+    transform: translateX(-50%), scale(1.1);
+    background-color: white;
+  }
+}
