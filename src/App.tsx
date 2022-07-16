@@ -35,7 +35,7 @@ const App: React.FC = () => {
         className="buy-button"
         onClick={() =>
           window.open(
-            "https://www.paypal.com/paypalme/gatecollective",
+            "https://www.paypal.com/paypalme/gatecollective/65",
             "_blank"
           )
         }
