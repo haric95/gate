@@ -6,6 +6,13 @@ $propagate-green-2: #00ee00;
 $gutter-size-desktop: 64px;
 $gutter-size-mobile: 32px;
 
+::selection {
+  background: #ee00ee; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: #ee00ee; /* Gecko Browsers */
+}
+
 // Mixins
 $breakpoints: (
   'mobile': 480px,
