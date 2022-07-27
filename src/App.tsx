@@ -55,11 +55,13 @@ const ARTIST_DESCRIPTIONS = {
   "DJ Pitch":
     "Our headline set will be provided by the TT and All Centre boss and all-round legend, DJ Pitch. Hardworking and diligent, this performer is responsible for some of the most FWD-thinking releases of the last few years. ",
   Z: "Unbridled electronic energy and hyper-techno from the turntable wizard ",
+
+  sinny: "“The only real DJ I know” - sinny",
+  "Marina w/ Neo Fung & Laboranta":
+    "Hushed whispers all around London talk of Marina’s fabled sets. Joining together ritual music, shibari practises and performance art.",
 };
 
 const ARTISTS_DJ = [
-  "Cajm",
-  "Bubble People",
   "Internal Object",
   "Flesh Suit Driver",
   "Oddman",
@@ -176,6 +178,7 @@ const App: React.FC = () => {
             ))}
           </div>
           <div className="dj">
+            <h1>DJ</h1>
             {ARTISTS_DJ.map((artist) => (
               <Expandable
                 key={artist}
