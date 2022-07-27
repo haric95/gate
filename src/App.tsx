@@ -33,7 +33,24 @@ const App: React.FC = () => {
         </EffectComposer>
       </Canvas>
       <div className="content">
-        <h1 className="title">Tickets</h1>
+        <div className="scroll">
+          <button
+            onClick={() => {
+              const containerElem = document.querySelector(".content");
+              const elem = document.querySelector(".tickets");
+              const rect = elem?.getBoundingClientRect();
+              if (rect && containerElem) {
+                debugger;
+                containerElem.scrollTo({ top: rect.top, behavior: "smooth" });
+              } else {
+                debugger;
+              }
+            }}
+          >
+            Enter
+          </button>
+        </div>
+        <h1 className="title tickets">Tickets</h1>
         <div className="buy">
           <div className="ticket-window left">
             <h2>Weekend</h2>
