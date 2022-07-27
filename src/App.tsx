@@ -81,9 +81,6 @@ const ARTISTS_DJ = [
 
 const App: React.FC = () => {
   const [openArtist, setOpenArtist] = useState<string | null>(null);
-
-  console.log(openArtist);
-
   return (
     <>
       <div className="bg" style={{ background: "url(/bg.jpeg)" }} />
@@ -159,6 +156,14 @@ const App: React.FC = () => {
               Execute Purchase
             </button>
           </div>
+        </div>
+        <div className="disclaimer">
+          <p>
+            **Click &quot;SEND TO SOMEONE YOU TRUST&quot; so we can avoid fees**
+          </p>
+          <p>
+            Please include your name and email address in your payment info.
+          </p>
         </div>
         <h1 className="title">Lineup</h1>
         <div className="lineup">

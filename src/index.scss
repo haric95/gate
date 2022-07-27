@@ -165,7 +165,7 @@ $breakpoints: (
 .buy {
   display: flex;
   justify-content: center;
-  margin-bottom: 128px;
+  margin-bottom: 32px;
   opacity: 0.8;
   padding-left: $gutter-size-desktop;
   padding-right: $gutter-size-desktop;
@@ -335,4 +335,13 @@ $breakpoints: (
 
 .underline {
   text-decoration: underline;
+}
+
+.disclaimer {
+  background-color: white;
+  text-align: center;
+  font-size: 16px;
+  padding: 8px;
+  margin-bottom: 128px;
+  opacity: 0.8;
 }
