@@ -101,7 +101,7 @@ export const Logo: React.FC = () => {
         material={isWireframe ? wireframeMaterial : regMaterial}
         geometry={logoNodes.A_3_.geometry}
         scale={viewport.width > 640 ? [3000, 3000, 3000] : [1500, 1500, 1500]}
-        position={[0, 50, 0]}
+        position={[0, 0, 0]}
         rotation={[Math.PI / 2.6, 0, 0]}
       ></mesh>
     </>

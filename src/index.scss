@@ -1,12 +1,47 @@
 $white: #f2f2f2;
 $grey-900: #393939;
 $blue-600: #2a5c85;
-$accent: #dd61ee;
+$propagate-green: #00ff1a;
+$propagate-green-2: #00ee00;
+$gutter-size-desktop: 64px;
+$gutter-size-mobile: 32px;
+
+// Mixins
+$breakpoints: (
+  'mobile': 480px,
+  'tablet': 768px,
+  'laptop': 1200px,
+) !default;
+
+@mixin bp($breakpoint) {
+  // If the key exists in the map
+  @if map-has-key($breakpoints, $breakpoint) {
+    // Prints a media query based on the value
+    @media (max-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  }
+
+  // If the key doesn't exist in the map
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Available breakpoints are: #{map-keys($breakpoints)}.";
+  }
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Microgramma-D-OT-Bold-Extended';
+  font-style: normal;
+  font-weight: 400;
+  font-style: italic;
+  src: url(/fonts/Microgramma-D-OT-Bold-Extended.ttf);
+}
 
 html,
 body {
   background: #ffffff;
-  color: #606063;
+  color: black;
   margin: 0;
   overflow: hidden;
   padding: 0;
@@ -16,18 +51,17 @@ body {
   height: 100vh;
   overflow: hidden;
   width: 100vw;
-
-  --white: #{$white};
-  --grey-900: #{$grey-900};
-  --blue-600: #{$blue-600};
-  --accent: #{$accent};
 }
 
 * {
   box-sizing: border-box;
-  font-family: "Lato", "sans-serif";
+  font-family: "Microgramma-D-OT-Bold-Extended", "sans-serif";
   font-weight: 300;
   letter-spacing: 0.2px;
+}
+
+h1, h2, h3, h4, p {
+  margin: 0;
 }
 
 canvas {
@@ -46,85 +80,6 @@ canvas {
   position: absolute;
   top: 0;
   width: 100vw;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5 {
-  color: $grey-900;
-  font-family: "Manrope";
-  margin: 0 0 8px;
-}
-
-h1 {
-  font-size: 8vh;
-  font-weight: 700;
-  letter-spacing: -1px;
-  line-height: 10vh;
-}
-
-h2 {
-  font-size: 5vh;
-  font-weight: 700;
-  letter-spacing: -1px;
-  line-height: 6vh;
-}
-
-h3 {
-  font-size: 4vh;
-  font-weight: 700;
-  letter-spacing: -1px;
-  line-height: 5vh;
-}
-
-h4 {
-  font-size: 18px;
-}
-
-p {
-  color: $grey-900;
-  font-family: "Manrope";
-  font-size: 3vh;
-  font-weight: 500;
-  margin: 0 0 8px 0;
-}
-
-span {
-  font-family: inherit;
-  font-weight: inherit;
-
-  &.accent {
-    color: $accent;
-  }
-
-  &.tech {
-    color: #608938;
-  }
-}
-
-a.inline-link {
-  color: inherit;
-  font-family: inherit;
-  font-weight: inherit;
-  pointer-events: all;
-  transition: color 0.25s ease-in-out;
-
-  &:hover {
-    color: $white;
-  }
-}
-
-.unstyled-button {
-  background-color: transparent;
-  border: 0;
-}
-
-.accessibility-label {
-  position: fixed;
-  left: 4px;
-  bottom: 0;
 }
 
 // Mixins
@@ -150,27 +105,6 @@ $breakpoints: (
   }
 }
 
-.buy-button {
-  left: 50%;
-  position: fixed;
-  top: 75%;
-  transform: translateX(-50%);
-  // border-radius: 30px;
-  cursor: pointer;
-  padding: 12px;
-  font-family: monospace;
-  color: #00ff1a;
-  border: 2px solid white;
-  background: black;
-  transform-origin: center;
-  transition: transform 0.5s linear;
-
-  &:hover {
-    transform: translateX(-50%), scale(1.1);
-    background-color: white;
-  }
-}
-
 .bg {
   position: fixed;
   width: 100vw;
@@ -179,4 +113,172 @@ $breakpoints: (
   object-fit: cover;
   background-position: center;
   filter: brightness(0.3);
+}
+
+.content {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding-top: 80vh;
+}
+
+.title {
+  text-align: center;
+  background-color: $propagate-green;
+  margin-bottom: 128px;
+  font-weight: 600;
+  padding: 16px;
+  opacity: 0.8;
+}
+
+.buy {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 128px;
+  opacity: 0.8;
+  padding-left: $gutter-size-desktop;
+  padding-right: $gutter-size-desktop;
+
+  @include bp('tablet') {
+    align-items: center;
+    flex-direction: column;
+    padding-left: $gutter-size-mobile;
+    padding-right: $gutter-size-mobile;
+  }
+
+  .ticket-window {
+    padding: 16px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    background-color: black;
+    border: 4px solid $propagate-green;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    text-align: center;
+
+    @include bp('tablet') {
+      width: 100%;
+    }
+
+    h1 {
+      font-size: 48px;
+      margin-bottom: 32px;
+      color: $propagate-green;
+    }
+
+    h2 {
+      font-size: 36px;
+      margin-bottom: 12px;
+    }
+
+    p {
+      font-size: 16px;
+      margin-bottom: 24px;
+    }
+
+    &.left {
+      margin-right: 36px;
+
+      @include bp('tablet') {
+        margin-right: 0;
+        margin-bottom: 36px;
+      }
+    }
+  }
+
+  .buy-button {
+    cursor: pointer;
+    padding: 12px;
+    font-family: monospace;
+    color: $propagate-green;
+    border: 2px solid white;
+    background: black;
+    transform-origin: center;
+    transition: transform 0.5s linear;
+  
+    &:hover {
+      transform: translateX(-50%), scale(1.1);
+      background-color: white;
+    }
+  }
+
+}
+
+.lineup {
+  margin-bottom: 128px;
+  opacity: 0.8;
+  margin-left: $gutter-size-desktop;
+  margin-right: $gutter-size-desktop;
+  background-color: white;
+  padding: 32px;
+  border: 4px solid black;
+
+
+  @include bp('tablet') {
+    margin-left: $gutter-size-mobile;
+    margin-right: $gutter-size-mobile;
+  }
+
+  .live, .dj {
+    h1 {
+      margin-bottom: 16px;
+    }
+  }
+
+  .live {
+    margin-bottom: 36px;
+  }
+
+  .dj {
+    text-align: right;
+  }
+}
+
+.info {
+  margin-bottom: 128px;
+
+  .more-info {
+    margin-bottom: 128px;
+    opacity: 0.8;
+    margin-left: $gutter-size-desktop;
+    margin-right: $gutter-size-desktop;
+    background-color: white;
+    padding: 32px;
+    border: 4px solid black;
+
+
+    @include bp('tablet') {
+      margin-left: $gutter-size-mobile;
+      margin-right: $gutter-size-mobile;
+    }
+  }
+
+
+  .menu {
+    display: flex;
+    justify-content: flex-end;
+
+    img {
+      width: 500px;
+  
+      @include bp('tablet') {
+        width: 80%;
+      }
+    }
+  }
+
+  .sec {
+    margin-bottom: 32px;
+  }
+
+  .right {
+    text-align: right;
+  }
 }

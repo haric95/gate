@@ -32,17 +32,100 @@ const App: React.FC = () => {
           <DotScreen opacity={0.5} />
         </EffectComposer>
       </Canvas>
-      <button
-        className="buy-button"
-        onClick={() =>
-          window.open(
-            "https://www.paypal.com/paypalme/gatecollective/65",
-            "_blank"
-          )
-        }
-      >
-        Execute Purchase
-      </button>
+      <div className="content">
+        <h1 className="title">Tickets</h1>
+        <div className="buy">
+          <div className="ticket-window left">
+            <h2>Weekend</h2>
+            <p>Friday 5pm - Sunday 5pm</p>
+            <h1>
+              <b>£65</b>
+            </h1>
+            <button
+              className="buy-button"
+              onClick={() =>
+                window.open(
+                  "https://www.paypal.com/paypalme/gatecollective/65",
+                  "_blank"
+                )
+              }
+            >
+              Execute Purchase
+            </button>
+          </div>
+          <div className="ticket-window">
+            <h2>One day</h2>
+            <p>Saturday 11am - Sunday 5pm</p>
+            <h1>
+              <b>£40</b>
+            </h1>
+            <button
+              className="buy-button"
+              onClick={() =>
+                window.open(
+                  "https://www.paypal.com/paypalme/gatecollective/40",
+                  "_blank"
+                )
+              }
+            >
+              Execute Purchase
+            </button>
+          </div>
+        </div>
+        <h1 className="title">Lineup</h1>
+        <div className="lineup">
+          <div className="live">
+            <h1>Live</h1>
+            <h3>Alphe Stael</h3>
+            <h3>Arama</h3>
+            <h3>Bart</h3>
+            <h3>Bubble People</h3>
+            <h3>Cajm</h3>
+            <h3>Chosen Family Business (Performance Art)</h3>
+            <h3>Craft Ebbing</h3>
+            <h3>Ella Ex Machina</h3>
+            <h3>Kristina May</h3>
+            <h3>Neo Fung & Laboranta</h3>
+            <h3>Overbeck</h3>
+            <h3>ROOO</h3>
+            <h3>Yewen Jin</h3>
+          </div>
+          <div className="dj">
+            <h1>DJ</h1>
+            <h3>Cajm</h3>
+            <h3>Bubble People</h3>
+            <h3>Internal Object</h3>
+            <h3>Flesh Suit Driver</h3>
+            <h3>Oddman</h3>
+            <h3>DJ Pitch</h3>
+            <h3>proto\\spacer</h3>
+            <h3>Ross Kemp On Nangs b2b Tony Rumble b2b who’s Tony Rumble?</h3>
+            <h3>Seshtan</h3>
+            <h3>SKIDOOJACKET</h3>
+            <h3>sinny</h3>
+            <h3>Sin Of The Father b2b Kristina May</h3>
+            <h3>Wi-Fi Crime Scene</h3>
+            <h3>Z</h3>
+          </div>
+        </div>
+        <h1 className="title">Info</h1>
+        <div className="info">
+          <div className="more-info">
+            <div className="sec left">
+              <h1>Location</h1>
+              <p>
+                Secret location close to Guildford. ~ 1h train from Waterloo.
+              </p>
+            </div>
+            <div className="sec right">
+              <h1>Menu</h1>
+              <div className="menu">
+                <img src="/menu.jpeg" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </>
   );
 };
