@@ -212,7 +212,7 @@ const App: React.FC = () => {
             <div className="sec left">
               <h1>Location</h1>
               <p>
-                Secret location close to Guildford. ~ 1h train from Waterloo.
+                Secret location close to Guildford. ~ 1hr train from Waterloo.
               </p>
             </div>
             <div className="sec left">
