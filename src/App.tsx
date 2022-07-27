@@ -21,6 +21,7 @@ const ARTISTS_LIVE = [
   "Craft Ebbing",
   "Ella Ex Machina",
   "Kristina May",
+  "Nathan JL",
   "Neo Fung & Laboranta",
   "Overbeck",
   "ROOO",
@@ -28,6 +29,7 @@ const ARTISTS_LIVE = [
 ];
 
 const ARTIST_DESCRIPTIONS = {
+  // Live
   Arama:
     "Providing the opening ceremony for our Saturday, using found sounds, objects and their own personal history to create a waterfall of narrative.",
   "Alphe Stael":
@@ -56,8 +58,9 @@ const ARTIST_DESCRIPTIONS = {
     "Our headline set will be provided by the TT and All Centre boss and all-round legend, DJ Pitch. Hardworking and diligent, this performer is responsible for some of the most FWD-thinking releases of the last few years. ",
   Z: "Unbridled electronic energy and hyper-techno from the turntable wizard ",
 
+  // DJ
   sinny: "“The only real DJ I know” - sinny",
-  "Marina w/ Neo Fung & Laboranta":
+  "Neo Fung & Laboranta":
     "Hushed whispers all around London talk of Marina’s fabled sets. Joining together ritual music, shibari practises and performance art.",
 };
 
