@@ -221,7 +221,7 @@ const App: React.FC = () => {
               <h2>2 SOUND SYSTEMS</h2>
               <h2>A FIELD AND A BARN</h2>
               <h2>
-                120 <span className="underline">EXECUTIVES</span>
+                120 <span className="underline">BODIES</span>
               </h2>
             </div>
             <div className="sec left">
