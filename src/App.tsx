@@ -121,10 +121,11 @@ const App: React.FC = () => {
           </button>
         </div>
         <h1 className="title tickets">Tickets</h1>
+        <h1 className="dates">AUG 5 / 6 / 7</h1>
         <div className="buy">
           <div className="ticket-window left">
             <h2>Weekend</h2>
-            <p>Friday 5pm - Sunday 5pm</p>
+            <p>Aug 5th 5pm - Aug 7th 5pm</p>
             <h1>
               <b>£65</b>
             </h1>
@@ -142,7 +143,7 @@ const App: React.FC = () => {
           </div>
           <div className="ticket-window">
             <h2>One day</h2>
-            <p>Saturday 11am - Sunday 5pm</p>
+            <p>Aug 6th 11am - Aug 7th 5pm</p>
             <h1>
               <b>£40</b>
             </h1>
@@ -209,7 +210,16 @@ const App: React.FC = () => {
                 Secret location close to Guildford. ~ 1h train from Waterloo.
               </p>
             </div>
-            <div className="sec right">
+            <div className="sec left">
+              <h2>INDOORS//OUTDOORS</h2>
+              <h2>LIVE//DJ//PERFORMANCE//SAUNA</h2>
+              <h2>2 SOUND SYSTEMS</h2>
+              <h2>A FIELD AND A BARN</h2>
+              <h2>
+                120 <span className="underline">ADULT BODIES</span>
+              </h2>
+            </div>
+            <div className="sec left">
               <h1>Menu</h1>
               <div className="menu">
                 <img src="/menu.jpeg" />

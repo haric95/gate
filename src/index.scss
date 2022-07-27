@@ -114,6 +114,14 @@ $breakpoints: (
   filter: brightness(0.3);
 }
 
+.dates {
+  text-align: center;
+  color: white;
+  text-shadow: -4px -4px 0 $propagate-green, 4px -4px 0 $propagate-green, -4px 4px 0 $propagate-green, 4px 4px 0 $propagate-green;
+  font-size: 64px;
+  margin-bottom: 32px;
+}
+
 .content {
   position: fixed;
   top: 0;
@@ -190,6 +198,7 @@ $breakpoints: (
       font-size: 48px;
       margin-bottom: 32px;
       color: $propagate-green;
+      text-shadow: -4px -4px 0 white, 4px -4px 0 white, -4px 4px 0 white, 4px 4px 0 white;
     }
 
     h2 {
@@ -282,7 +291,7 @@ $breakpoints: (
 
   .menu {
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
 
     img {
       width: 500px;
@@ -321,4 +330,9 @@ $breakpoints: (
   font-size: 12px;
   color: black;
   font-family: monospace;
+}
+
+
+.underline {
+  text-decoration: underline;
 }
