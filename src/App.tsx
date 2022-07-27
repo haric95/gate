@@ -216,8 +216,8 @@ const App: React.FC = () => {
               </p>
             </div>
             <div className="sec left">
-              <h2>INDOORS//OUTDOORS</h2>
-              <h2>LIVE//DJ//PERFORMANCE//SAUNA</h2>
+              <h2>INDOORS // OUTDOORS</h2>
+              <h2>LIVE // DJ // PERFORMANCE // SAUNA</h2>
               <h2>2 SOUND SYSTEMS</h2>
               <h2>A FIELD AND A BARN</h2>
               <h2>
