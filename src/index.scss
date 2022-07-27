@@ -302,3 +302,24 @@ $breakpoints: (
     text-align: right;
   }
 }
+
+.Collapsible__trigger {
+  &.is-open {
+    cursor: pointer;
+  }
+}
+
+.collapsible {
+  margin-bottom: 4px;
+
+  &.active {
+    cursor: pointer;
+  }
+}
+
+.desc {
+  padding: 16px;
+  font-size: 12px;
+  color: black;
+  font-family: monospace;
+}

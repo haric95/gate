@@ -1,6 +1,6 @@
 import { Camera } from "components/camera/camera";
 import { Logo } from "components/logo/logo";
-import React, { Suspense } from "react";
+import React, { Suspense, useState } from "react";
 import { Canvas } from "react-three-fiber";
 import {
   Bloom,
@@ -9,8 +9,76 @@ import {
   Vignette,
   DotScreen,
 } from "react-postprocessing";
+import { Expandable } from "components/expandable";
+
+const ARTISTS_LIVE = [
+  "Alphe Stael",
+  "Arama",
+  "Bart",
+  "Bubble People",
+  "Cajm",
+  "Chosen Family, Business (Performance Art)",
+  "Craft Ebbing",
+  "Ella Ex Machina",
+  "Kristina May",
+  "Neo Fung & Laboranta",
+  "Overbeck",
+  "ROOO",
+  "Yewen Jin",
+];
+
+const ARTIST_DESCRIPTIONS = {
+  Arama:
+    "Providing the opening ceremony for our Saturday, using found sounds, objects and their own personal history to create a waterfall of narrative.",
+  "Alphe Stael":
+    "Travelling to our location via aeronautical means for a salvo of live techno induced polyrhythms.",
+  Bart: "Live modular hip-wiggling goodness. One of the most hotly anticipated returns of a GATE alumni.",
+  "Bubble People":
+    "Our resident organ grinder will debut a batch of new material for our dose of live IDM. Extreme melodics in effect.",
+  Cajm: "Fever dream producer visiting Earth once more to create a unique liveset for us. Truly one-off performance, which cannot be missed. ",
+  "Chosen Family Business":
+    "This Machine  ? will see the unveiling of a 5 part multimedia piece, taking place across 2 stages and incorporating projection, music and performance art.",
+  "Ella Ex Machina":
+    "Coded live electronic hardcore for the masses. Daytime antics I hear you say?",
+  "Craft Ebbing":
+    "Purveyors of scathing political electronica. Lock the doors and break the fader off the master, this pile of gathered electronics will be a danger. “I’d sell my life! For the Arts Council England.”",
+  "Kristina May":
+    "MPC1000 liveset by the ZykO BiTCh! This upcoming producer has been recording new tracks at breakneck speed over the last few months.",
+  "Over-beck":
+    "Live improvised house and techno from the keyboard maestro, wickedly colourful journey through space and time, driven by the artist’s custom built electronic system.",
+  "Yewen Jin":
+    "Live coded and Ableton mangling performance. Recent appearances include Corsica Studios and Iklectik for this Infinite Monkey.",
+  "Internal Object":
+    "Noise and heavy set provided by our resident DJ and chief whip. Late night drone and hard techno meditation. ",
+  Oddman:
+    "The Beat Crime boss and collector of fine jungle will deliver yet another topshelf mix of styles for the people. If you know, you know!",
+  "DJ Pitch":
+    "Our headline set will be provided by the TT and All Centre boss and all-round legend, DJ Pitch. Hardworking and diligent, this performer is responsible for some of the most FWD-thinking releases of the last few years. ",
+  Z: "Unbridled electronic energy and hyper-techno from the turntable wizard ",
+};
+
+const ARTISTS_DJ = [
+  "Cajm",
+  "Bubble People",
+  "Internal Object",
+  "Flesh Suit Driver",
+  "Oddman",
+  "DJ Pitch",
+  "proto\\spacer",
+  "Ross Kemp On Nangs b2b Tony Rumble b2b who’s Tony Rumble?",
+  "Seshtan",
+  "SKIDOOJACKET",
+  "sinny",
+  "Sin Of The Father b2b Kristina May",
+  "Wi-Fi Crime Scene",
+  "Z",
+];
 
 const App: React.FC = () => {
+  const [openArtist, setOpenArtist] = useState<string | null>(null);
+
+  console.log(openArtist);
+
   return (
     <>
       <div className="bg" style={{ background: "url(/bg.jpeg)" }} />
@@ -40,10 +108,7 @@ const App: React.FC = () => {
               const elem = document.querySelector(".tickets");
               const rect = elem?.getBoundingClientRect();
               if (rect && containerElem) {
-                debugger;
                 containerElem.scrollTo({ top: rect.top, behavior: "smooth" });
-              } else {
-                debugger;
               }
             }}
           >
@@ -93,36 +158,40 @@ const App: React.FC = () => {
         <div className="lineup">
           <div className="live">
             <h1>Live</h1>
-            <h3>Alphe Stael</h3>
-            <h3>Arama</h3>
-            <h3>Bart</h3>
-            <h3>Bubble People</h3>
-            <h3>Cajm</h3>
-            <h3>Chosen Family Business (Performance Art)</h3>
-            <h3>Craft Ebbing</h3>
-            <h3>Ella Ex Machina</h3>
-            <h3>Kristina May</h3>
-            <h3>Neo Fung & Laboranta</h3>
-            <h3>Overbeck</h3>
-            <h3>ROOO</h3>
-            <h3>Yewen Jin</h3>
+            {ARTISTS_LIVE.map((artist) => (
+              <Expandable
+                key={artist}
+                isOpen={openArtist === artist}
+                title={artist}
+                description={
+                  artist in ARTIST_DESCRIPTIONS
+                    ? ARTIST_DESCRIPTIONS[
+                        artist as keyof typeof ARTIST_DESCRIPTIONS
+                      ]
+                    : undefined
+                }
+                set={setOpenArtist}
+                align="left"
+              />
+            ))}
           </div>
           <div className="dj">
-            <h1>DJ</h1>
-            <h3>Cajm</h3>
-            <h3>Bubble People</h3>
-            <h3>Internal Object</h3>
-            <h3>Flesh Suit Driver</h3>
-            <h3>Oddman</h3>
-            <h3>DJ Pitch</h3>
-            <h3>proto\\spacer</h3>
-            <h3>Ross Kemp On Nangs b2b Tony Rumble b2b who’s Tony Rumble?</h3>
-            <h3>Seshtan</h3>
-            <h3>SKIDOOJACKET</h3>
-            <h3>sinny</h3>
-            <h3>Sin Of The Father b2b Kristina May</h3>
-            <h3>Wi-Fi Crime Scene</h3>
-            <h3>Z</h3>
+            {ARTISTS_DJ.map((artist) => (
+              <Expandable
+                key={artist}
+                isOpen={openArtist === artist}
+                title={artist}
+                description={
+                  artist in ARTIST_DESCRIPTIONS
+                    ? ARTIST_DESCRIPTIONS[
+                        artist as keyof typeof ARTIST_DESCRIPTIONS
+                      ]
+                    : undefined
+                }
+                set={setOpenArtist}
+                align="right"
+              />
+            ))}
           </div>
         </div>
         <h1 className="title">Info</h1>
