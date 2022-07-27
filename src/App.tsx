@@ -46,7 +46,7 @@ const ARTIST_DESCRIPTIONS = {
     "Purveyors of scathing political electronica. Lock the doors and break the fader off the master, this pile of gathered electronics will be a danger. “I’d sell my life! For the Arts Council England.”",
   "Kristina May":
     "MPC1000 liveset by the ZykO BiTCh! This upcoming producer has been recording new tracks at breakneck speed over the last few months.",
-  "Over-beck":
+  Overbeck:
     "Live improvised house and techno from the keyboard maestro, wickedly colourful journey through space and time, driven by the artist’s custom built electronic system.",
   "Yewen Jin":
     "Live coded and Ableton mangling performance. Recent appearances include Corsica Studios and Iklectik for this Infinite Monkey.",
