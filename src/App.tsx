@@ -29,18 +29,18 @@ const ARTISTS_LIVE = [
 ] as const;
 
 const ARTISTS_DJ = [
-  "Internal Object",
-  "Flesh Suit Driver",
-  "Oddman",
+  "Cyberdoll#17",
   "DJ Pitch",
+  "Flesh Suit Driver",
+  "Internal Object",
+  "Oddman",
   "proto\\\\spacer",
   "Ross Kemp On Nangs b2b Tony Rumble b2b who’s Tony Rumble?",
   "Seshtan",
-  "SKIDOOJACKET",
-  "sinny",
   "Sin Of The Father b2b Kristina May",
+  "sinny",
+  "SKIDOOJACKET",
   "Wi-Fi Crime Scene",
-  "Cyberdoll#17",
 ] as const;
 
 const ARTIST_DESCRIPTIONS: Partial<
