@@ -17,7 +17,7 @@ const ARTISTS_LIVE = [
   "Bart",
   "Bubble People",
   "Cajm",
-  "Chosen Family, Business (Performance Art)",
+  "Chosen Family Business (Performance Art)",
   "Craft Ebbing",
   "Ella Ex Machina",
   "Kristina May",
@@ -26,9 +26,26 @@ const ARTISTS_LIVE = [
   "Overbeck",
   "ROOO",
   "Yewen Jin",
-];
+] as const;
 
-const ARTIST_DESCRIPTIONS = {
+const ARTISTS_DJ = [
+  "Internal Object",
+  "Flesh Suit Driver",
+  "Oddman",
+  "DJ Pitch",
+  "proto\\spacer",
+  "Ross Kemp On Nangs b2b Tony Rumble b2b who’s Tony Rumble?",
+  "Seshtan",
+  "SKIDOOJACKET",
+  "sinny",
+  "Sin Of The Father b2b Kristina May",
+  "Wi-Fi Crime Scene",
+  "Z",
+] as const;
+
+const ARTIST_DESCRIPTIONS: Partial<
+  Record<typeof ARTISTS_DJ[number] | typeof ARTISTS_LIVE[number], string>
+> = {
   // Live
   Arama:
     "Providing the opening ceremony for our Saturday, using found sounds, objects and their own personal history to create a waterfall of narrative.",
@@ -38,7 +55,7 @@ const ARTIST_DESCRIPTIONS = {
   "Bubble People":
     "Our resident organ grinder will debut a batch of new material for our dose of live IDM. Extreme melodics in effect.",
   Cajm: "Fever dream producer visiting Earth once more to create a unique liveset for us. Truly one-off performance, which cannot be missed. ",
-  "Chosen Family Business":
+  "Chosen Family Business (Performance Art)":
     "This Machine  ? will see the unveiling of a 5 part multimedia piece, taking place across 2 stages and incorporating projection, music and performance art.",
   "Ella Ex Machina":
     "Coded live electronic hardcore for the masses. Daytime antics I hear you say?",
@@ -62,22 +79,15 @@ const ARTIST_DESCRIPTIONS = {
   sinny: "“The only real DJ I know” - sinny",
   "Neo Fung & Laboranta":
     "Hushed whispers all around London talk of Marina’s fabled sets. Joining together ritual music, shibari practises and performance art.",
+  SKIDOOJACKET:
+    "brand new skidoo 900 ace 100kms on it an 5 yr warranty $22000 obo comes wit cover wrap around bumper toll hitch air ride suspension adjustable steering 156 in track 20 in wide ice scratches new oil and filter for the first oil change and a big cargo box, skimmed da atlantic in er last winter buddy its mint ",
+  "Flesh Suit Driver":
+    "Abstract to click clack. Baddie music for baddie people.",
+  "Ross Kemp On Nangs b2b Tony Rumble b2b who’s Tony Rumble?":
+    "The ultimate vinyl rumble jungle tumble",
+  ROOO: "ROOO IS THE AUGMENTED PROJECTION OF AN ARTIST WHO WRITES CRYSTAL CLEAR MELODIES WITH NON-CLICHÉD STRUCTURES. OBSESSIONS, SELF-DEPRECATION AND UNEXPRESSED HYPER-SEXUALITY EMBODY THE OVER-EXAGGERATED VERSION OF AN ENTITY WHO LIVES THE TRAGEDIES AND CONTRADICTIONS OF THE INFORMATION AGE.",
+  "proto\\spacer": "Not bad for a first gig",
 };
-
-const ARTISTS_DJ = [
-  "Internal Object",
-  "Flesh Suit Driver",
-  "Oddman",
-  "DJ Pitch",
-  "proto\\spacer",
-  "Ross Kemp On Nangs b2b Tony Rumble b2b who’s Tony Rumble?",
-  "Seshtan",
-  "SKIDOOJACKET",
-  "sinny",
-  "Sin Of The Father b2b Kristina May",
-  "Wi-Fi Crime Scene",
-  "Z",
-];
 
 const App: React.FC = () => {
   const [openArtist, setOpenArtist] = useState<string | null>(null);
