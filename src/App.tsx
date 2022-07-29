@@ -40,7 +40,7 @@ const ARTISTS_DJ = [
   "sinny",
   "Sin Of The Father b2b Kristina May",
   "Wi-Fi Crime Scene",
-  "Z",
+  "Cyberdoll#17",
 ] as const;
 
 const ARTIST_DESCRIPTIONS: Partial<
@@ -73,7 +73,8 @@ const ARTIST_DESCRIPTIONS: Partial<
     "The Beat Crime boss and collector of fine jungle will deliver yet another topshelf mix of styles for the people. If you know, you know!",
   "DJ Pitch":
     "Our headline set will be provided by the TT and All Centre boss and all-round legend, DJ Pitch. Hardworking and diligent, this performer is responsible for some of the most FWD-thinking releases of the last few years. ",
-  Z: "Unbridled electronic energy and hyper-techno from the turntable wizard ",
+  "Cyberdoll#17":
+    "Unbridled electronic energy and hyper-techno from the turntable wizard ",
 
   // DJ
   sinny: "“The only real DJ I know” - sinny",
