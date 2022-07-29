@@ -33,7 +33,7 @@ const ARTISTS_DJ = [
   "Flesh Suit Driver",
   "Oddman",
   "DJ Pitch",
-  "proto\\spacer",
+  "proto\\\\spacer",
   "Ross Kemp On Nangs b2b Tony Rumble b2b who’s Tony Rumble?",
   "Seshtan",
   "SKIDOOJACKET",
@@ -86,7 +86,7 @@ const ARTIST_DESCRIPTIONS: Partial<
   "Ross Kemp On Nangs b2b Tony Rumble b2b who’s Tony Rumble?":
     "The ultimate vinyl rumble jungle tumble",
   ROOO: "ROOO IS THE AUGMENTED PROJECTION OF AN ARTIST WHO WRITES CRYSTAL CLEAR MELODIES WITH NON-CLICHÉD STRUCTURES. OBSESSIONS, SELF-DEPRECATION AND UNEXPRESSED HYPER-SEXUALITY EMBODY THE OVER-EXAGGERATED VERSION OF AN ENTITY WHO LIVES THE TRAGEDIES AND CONTRADICTIONS OF THE INFORMATION AGE.",
-  "proto\\spacer": "Not bad for a first gig",
+  "proto\\\\spacer": "Not bad for a first gig",
 };
 
 const App: React.FC = () => {
