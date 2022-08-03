@@ -75,6 +75,11 @@ const ARTIST_DESCRIPTIONS: Partial<
     "Our headline set will be provided by the TT and All Centre boss and all-round legend, DJ Pitch. Hardworking and diligent, this performer is responsible for some of the most FWD-thinking releases of the last few years. ",
   "Cyberdoll#17":
     "Unbridled electronic energy and hyper-techno from the turntable wizard ",
+  "Nathan JL": "Master of live-coding disturbances",
+  Seshtan:
+    "First lost and then found in a crate of techno vynils. Expect groovy percussions, tribal and ritualistic rhythms",
+  "Wi-Fi Crime Scene": "leipzig’s hottest youtube ripper",
+  "Sin Of The Father b2b Kristina May": "hardcore back n forth",
 
   // DJ
   sinny: "“The only real DJ I know” - sinny",
