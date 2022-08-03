@@ -30,7 +30,6 @@ const ARTISTS_LIVE = [
 
 const ARTISTS_DJ = [
   "Cyberdoll#17",
-  "DJ Pitch",
   "Flesh Suit Driver",
   "Internal Object",
   "Oddman",
@@ -71,8 +70,6 @@ const ARTIST_DESCRIPTIONS: Partial<
     "Noise and heavy set provided by our resident DJ and chief whip. Late night drone and hard techno meditation. ",
   Oddman:
     "The Beat Crime boss and collector of fine jungle will deliver yet another topshelf mix of styles for the people. If you know, you know!",
-  "DJ Pitch":
-    "Our headline set will be provided by the TT and All Centre boss and all-round legend, DJ Pitch. Hardworking and diligent, this performer is responsible for some of the most FWD-thinking releases of the last few years. ",
   "Cyberdoll#17":
     "Unbridled electronic energy and hyper-techno from the turntable wizard ",
   "Nathan JL": "Master of live-coding disturbances",
