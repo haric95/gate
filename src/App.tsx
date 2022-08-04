@@ -42,6 +42,8 @@ const ARTISTS_DJ = [
   "Wi-Fi Crime Scene",
 ] as const;
 
+const ARTISTS_VISUALS = ["Eva + Bruno", "scary hari", "Visual Replica"];
+
 const ARTIST_DESCRIPTIONS: Partial<
   Record<typeof ARTISTS_DJ[number] | typeof ARTISTS_LIVE[number], string>
 > = {
@@ -215,6 +217,20 @@ const App: React.FC = () => {
                 }
                 set={setOpenArtist}
                 align="right"
+              />
+            ))}
+          </div>
+          <div className="visual">
+            <h1>VISUAL</h1>
+            {ARTISTS_VISUALS.map((artist) => (
+              <Expandable
+                key={artist}
+                isOpen={openArtist === artist}
+                title={artist}
+                set={() => {
+                  console.log();
+                }}
+                align="left"
               />
             ))}
           </div>

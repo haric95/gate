@@ -261,13 +261,13 @@ $breakpoints: (
     margin-right: $gutter-size-mobile;
   }
 
-  .live, .dj {
+  .live, .dj, .visual {
     h1 {
       margin-bottom: 16px;
     }
   }
 
-  .live {
+  .live, .dj {
     margin-bottom: 36px;
   }
 
