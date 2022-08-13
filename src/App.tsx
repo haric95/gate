@@ -10,6 +10,7 @@ import {
   DotScreen,
 } from "react-postprocessing";
 import { Expandable } from "components/expandable";
+import { GATEDropzone } from "components/dropzone";
 
 const ARTISTS_LIVE = [
   "Alphe Stael",
@@ -119,66 +120,25 @@ const App: React.FC = () => {
       </Canvas>
       <div className="content">
         <div className="scroll">
-          <button
-            onClick={() => {
-              const containerElem = document.querySelector(".content");
-              const elem = document.querySelector(".tickets");
-              const rect = elem?.getBoundingClientRect();
-              if (rect && containerElem) {
-                containerElem.scrollTo({ top: rect.top, behavior: "smooth" });
-              }
-            }}
-          >
-            Enter
-          </button>
-        </div>
-        <h1 className="title tickets">Tickets</h1>
-        <h1 className="dates">AUG 5 / 6 / 7</h1>
-        <div className="buy">
-          <div className="ticket-window left">
-            <h2>Weekend</h2>
-            <p>Aug 5th 5pm - Aug 7th 5pm</p>
-            <h1>
-              <b>£65</b>
-            </h1>
-            <button
-              className="buy-button"
-              onClick={() =>
-                window.open(
-                  "https://www.paypal.com/paypalme/gatecollective/65",
-                  "_blank"
-                )
-              }
+          <div className="ty">
+            <p>
+              We are beyond grateful for the support of those who attended
+              PROPAGATE! You were the most respectful group of guests we could
+              have hoped for :)
+            </p>
+            <p>
+              If you have recorded any evidence of the festival, we would love
+              to see it! Please upload photos and/ or videos below.
+            </p>
+            <a
+              href="https://www.dropbox.com/request/xiRc22HIhLfzM76e7CZ7"
+              target="_blank"
+              rel="noreferrer"
             >
-              Execute Purchase
-            </button>
+              <button className="upload-button">Upload</button>
+              {/* <GATEDropzone /> */}
+            </a>
           </div>
-          <div className="ticket-window">
-            <h2>One day</h2>
-            <p>Aug 6th 11am - Aug 7th 5pm</p>
-            <h1>
-              <b>£40</b>
-            </h1>
-            <button
-              className="buy-button"
-              onClick={() =>
-                window.open(
-                  "https://www.paypal.com/paypalme/gatecollective/40",
-                  "_blank"
-                )
-              }
-            >
-              Execute Purchase
-            </button>
-          </div>
-        </div>
-        <div className="disclaimer">
-          <p>
-            **Click &quot;SEND TO SOMEONE YOU TRUST&quot; so we can avoid fees**
-          </p>
-          <p>
-            Please include your name and email address in your payment info.
-          </p>
         </div>
         <h1 className="title">Lineup</h1>
         <div className="lineup">
