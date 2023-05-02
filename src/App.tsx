@@ -43,6 +43,7 @@ const App: React.FC = () => {
               padding: 8,
               color: "#26256B",
               border: "2px solid #26256B",
+              cursor: "pointer",
             }}
           >
             Execute Purchase
