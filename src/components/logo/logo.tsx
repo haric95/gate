@@ -1,4 +1,4 @@
-import { useGLTF } from "drei";
+import { useGLTF, Text } from "drei";
 import React, { useMemo, useRef, useState } from "react";
 import { useFrame, useThree } from "react-three-fiber";
 import { Color, MeshBasicMaterial, MeshNormalMaterial, Object3D } from "three";
@@ -94,16 +94,9 @@ export const Logo: React.FC = () => {
 
   return (
     <>
-      <mesh
-        onPointerOver={() => setIsMouseOver(true)}
-        onPointerOut={() => setIsMouseOver(false)}
-        ref={logoRef}
-        material={isWireframe ? wireframeMaterial : regMaterial}
-        geometry={logoNodes.A_3_.geometry}
-        scale={viewport.width > 640 ? [3000, 3000, 3000] : [1500, 1500, 1500]}
-        position={[0, 0, 0]}
-        rotation={[Math.PI / 2.6, 0, 0]}
-      ></mesh>
+      <Text position={[0, 0, 0]} scale={[1000, 1000, 1000]} font="monospace">
+        Grab A Tent Everybody
+      </Text>
     </>
   );
 };
