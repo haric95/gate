@@ -118,7 +118,26 @@ $breakpoints: (
   top: 0px;
   object-fit: cover;
   background-position: center;
+  display: flex;
 }
+
+.right {
+  padding-left: 24;
+  padding-right: 16;
+  height: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+  .bg {
+    flex-direction: column; 
+  }
+
+  .right {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
 
 .dates {
   text-align: center;

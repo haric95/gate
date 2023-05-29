@@ -91,10 +91,7 @@ const App: React.FC = () => {
           className="right"
           style={{
             width: "100%",
-            height: "100%",
             position: "relative",
-            paddingLeft: 24,
-            paddingRight: 16,
           }}
         >
           <img
