@@ -69,6 +69,9 @@ const App: React.FC = () => {
             <p style={{ color: COLORS[3], marginBottom: 24 }}>
               <b>INSTALLATIONS</b>
             </p>
+            <p style={{ color: COLORS[3], marginBottom: 24 }}>
+              <b>Secret location ~1h from London</b>
+            </p>
             <p style={{ color: COLORS[2], marginBottom: 8, fontSize: 16 }}>
               LINEUP TBA
             </p>
