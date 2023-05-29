@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useState } from "react";
 
-const COLORS = ["#ffffff", "#a1d182", "#55ba00", "#11af00"];
+const COLORS = ["#ffffff", "#a1d182", "#6dba2d", "#11af00"];
 
 const App: React.FC = () => {
   const [isSlim, setIsSlim] = useState(false);
@@ -50,13 +50,28 @@ const App: React.FC = () => {
             <h2 style={{ color: COLORS[2] }}>Tent</h2>
             <h2 style={{ color: COLORS[3] }}>Everybody</h2>
           </div>
-          <div className="ticket-window left" style={{ width: "180px" }}>
+          <div className="ticket-window left">
             <p style={{ color: COLORS[0] }}>Aug 4th - Aug 6th</p>
             <p style={{ color: COLORS[1] }}>
               <b>£75</b>
             </p>
             <p style={{ color: COLORS[2], marginBottom: 24 }}>
               <b>120 bodies</b>
+            </p>
+            <p style={{ color: COLORS[0] }}>
+              <b>LIVE //</b>
+            </p>
+            <p style={{ color: COLORS[1] }}>
+              <b>DJ //</b>
+            </p>
+            <p style={{ color: COLORS[2] }}>
+              <b>PEFORMANCE //</b>
+            </p>
+            <p style={{ color: COLORS[3], marginBottom: 24 }}>
+              <b>INSTALLATIONS</b>
+            </p>
+            <p style={{ color: COLORS[2], marginBottom: 8, fontSize: 16 }}>
+              LINEUP TBA
             </p>
             <button
               className="buy-button"
@@ -78,12 +93,24 @@ const App: React.FC = () => {
                 border: "2px solid #26256B",
                 cursor: "pointer",
                 marginBottom: 16,
+                fontSize: 16,
               }}
             >
               Execute Purchase
             </button>
-            <p style={{ color: COLORS[2], marginBottom: 8, fontSize: 12 }}>
-              lineup to be announced
+            <p
+              style={{
+                color: COLORS[0],
+                fontSize: 12,
+                width: "100%",
+                marginBottom: 16,
+              }}
+            >
+              Please send the payment as ‘friends and family’ + include your
+              email address with the payment
+            </p>
+            <p style={{ color: COLORS[0], fontSize: 12, width: "100%" }}>
+              Ticket includes camping on August 4th & 5th + home cooked meals
             </p>
           </div>
         </div>

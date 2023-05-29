@@ -127,6 +127,9 @@ $breakpoints: (
   height: 100%;
 }
 
+.ticket-window {
+  width: 280px
+}
 
 @media only screen and (max-width: 600px) {
   .bg {
@@ -136,6 +139,10 @@ $breakpoints: (
   .right {
     padding-left: 0;
     padding-right: 0;
+  }
+
+  .ticket-window {
+    width: 100%;
   }
 }
 
@@ -458,3 +465,5 @@ $breakpoints: (
   height: 100%;
   position: absolute;
 }
+
+
