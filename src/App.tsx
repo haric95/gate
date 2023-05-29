@@ -40,7 +40,6 @@ const App: React.FC = () => {
           backgroundColor: "black",
           zIndex: 0,
           padding: 24,
-          display: "flex",
         }}
       >
         <div>
@@ -109,7 +108,14 @@ const App: React.FC = () => {
               Please send the payment as ‘friends and family’ + include your
               email address with the payment
             </p>
-            <p style={{ color: COLORS[0], fontSize: 12, width: "100%" }}>
+            <p
+              style={{
+                color: COLORS[0],
+                fontSize: 12,
+                width: "100%",
+                marginBottom: 16,
+              }}
+            >
               Ticket includes camping on August 4th & 5th + home cooked meals
             </p>
           </div>
@@ -150,8 +156,9 @@ const App: React.FC = () => {
               height: "100%",
               position: "absolute",
               display: isSlim ? "block" : "none",
-              opacity: 0.5,
+              opacity: 0.8,
             }}
+            className="img-3"
           />
         </div>
       </div>
