@@ -27,8 +27,8 @@ const App: React.FC = () => {
 
   const [[rand1, rand2], _] = useState(() => {
     return [
-      Math.floor(Math.random() * 16) + 1,
-      Math.floor(Math.random() * 16) + 1,
+      Math.floor(Math.random() * 24) + 1,
+      Math.floor(Math.random() * 24) + 1,
     ];
   });
 
@@ -60,6 +60,12 @@ const App: React.FC = () => {
             </p>
             <button
               className="buy-button"
+              onMouseEnter={() => {
+                setIsSlim(true);
+              }}
+              onMouseLeave={() => {
+                setIsSlim(false);
+              }}
               onClick={() =>
                 window.open(
                   "https://www.paypal.com/paypalme/gatecollective/75",
@@ -88,6 +94,7 @@ const App: React.FC = () => {
             height: "100%",
             position: "relative",
             paddingLeft: 24,
+            paddingRight: 16,
           }}
         >
           <img
@@ -119,7 +126,7 @@ const App: React.FC = () => {
               height: "100%",
               position: "absolute",
               display: isSlim ? "block" : "none",
-              filter: "grayscale(1)",
+              opacity: 0.5,
             }}
           />
         </div>
