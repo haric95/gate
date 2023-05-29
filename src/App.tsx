@@ -151,18 +151,19 @@ const App: React.FC = () => {
             }}
             className="img-2"
           />
-          <img
-            src={`/images/sinan.jpeg`}
-            style={{
-              width: "100%",
-              objectFit: "contain",
-              height: "100%",
-              position: "absolute",
-              display: isSlim ? "block" : "none",
-              opacity: 0.8,
-            }}
-            className="img-3"
-          />
+          <div className={`${isSlim ? "zoom" : "not-zoom"}`}>
+            <img
+              src={`/images/sinan.jpeg`}
+              style={{
+                width: "100%",
+                objectFit: "contain",
+                height: "100%",
+                position: "absolute",
+                opacity: isSlim ? 0.8 : 0,
+              }}
+              className={`img-3 play-animation`}
+            />
+          </div>
         </div>
       </div>
     </>
