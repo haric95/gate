@@ -425,3 +425,16 @@ $breakpoints: (
     animation-name: dots-3;
     -webkit-animation-name: dots-3;
 }
+
+.img-1 {
+  position: relative;
+}
+
+.img-1::before {
+  content: "";
+  display: inline-block;
+  background-color: green;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}

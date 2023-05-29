@@ -50,12 +50,12 @@ const App: React.FC = () => {
             <h2 style={{ color: COLORS[2] }}>Tent</h2>
             <h2 style={{ color: COLORS[3] }}>Everybody</h2>
           </div>
-          <div className="ticket-window left" style={{ width: "fit-content" }}>
+          <div className="ticket-window left" style={{ width: "180px" }}>
             <p style={{ color: COLORS[0] }}>Aug 4th - Aug 6th</p>
             <p style={{ color: COLORS[1] }}>
               <b>£75</b>
             </p>
-            <p style={{ color: COLORS[2], marginBottom: 8 }}>
+            <p style={{ color: COLORS[2], marginBottom: 24 }}>
               <b>120 bodies</b>
             </p>
             <button
@@ -71,10 +71,14 @@ const App: React.FC = () => {
                 color: "#26256B",
                 border: "2px solid #26256B",
                 cursor: "pointer",
+                marginBottom: 16,
               }}
             >
               Execute Purchase
             </button>
+            <p style={{ color: COLORS[2], marginBottom: 8, fontSize: 12 }}>
+              lineup to be announced
+            </p>
           </div>
         </div>
         <div
@@ -94,6 +98,7 @@ const App: React.FC = () => {
               height: "100%",
               position: "absolute",
             }}
+            className="img-1"
           />
           <img
             src={`/images/${rand1}.jpg`}
@@ -104,6 +109,7 @@ const App: React.FC = () => {
               opacity: 0.5,
               position: "absolute",
             }}
+            className="img-2"
           />
           <img
             src={`/images/sinan.jpeg`}
@@ -113,6 +119,7 @@ const App: React.FC = () => {
               height: "100%",
               position: "absolute",
               display: isSlim ? "block" : "none",
+              filter: "grayscale(1)",
             }}
           />
         </div>
