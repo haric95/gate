@@ -70,7 +70,7 @@ const App: React.FC = () => {
               <b>INSTALLATIONS //</b>
             </p>
             <p style={{ color: COLORS[1], marginBottom: 24 }}>
-              <b>HOMEMADE FOOD //</b>
+              <b>HOMEMADE FOOD</b>
             </p>
             <p style={{ color: COLORS[0], marginBottom: 24 }}>
               <b>Secret location ~1h from London</b>
