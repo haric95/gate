@@ -151,7 +151,7 @@ const App: React.FC = () => {
             }}
             className="img-2"
           />
-          <div className={`${isSlim ? "zoom" : "not-zoom"}`}>
+          <div className={`image-container ${isSlim ? "zoom" : ""}`}>
             <img
               src={`/images/sinan.jpeg`}
               style={{
@@ -159,7 +159,7 @@ const App: React.FC = () => {
                 objectFit: "contain",
                 height: "100%",
                 position: "absolute",
-                opacity: isSlim ? 0.8 : 0,
+                opacity: isSlim ? 0.9 : 0,
               }}
               className={`img-3 play-animation`}
             />
