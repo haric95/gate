@@ -66,16 +66,16 @@ const App: React.FC = () => {
             <p style={{ color: COLORS[2] }}>
               <b>PEFORMANCE //</b>
             </p>
-            <p style={{ color: COLORS[3], marginBottom: 24 }}>
+            <p style={{ color: COLORS[3] }}>
               <b>INSTALLATIONS //</b>
             </p>
-            <p style={{ color: COLORS[3], marginBottom: 24 }}>
+            <p style={{ color: COLORS[1], marginBottom: 24 }}>
               <b>HOMEMADE FOOD //</b>
             </p>
-            <p style={{ color: COLORS[3], marginBottom: 24 }}>
+            <p style={{ color: COLORS[0], marginBottom: 24 }}>
               <b>Secret location ~1h from London</b>
             </p>
-            <p style={{ color: COLORS[2], marginBottom: 8, fontSize: 16 }}>
+            <p style={{ color: COLORS[3], marginBottom: 8, fontSize: 16 }}>
               LINEUP TBA
             </p>
             <button
@@ -94,7 +94,7 @@ const App: React.FC = () => {
               }
               style={{
                 padding: 8,
-                color: "#26256B",
+                color: "black",
                 border: "2px solid #26256B",
                 cursor: "pointer",
                 marginBottom: 16,
