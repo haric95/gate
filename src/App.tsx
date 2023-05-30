@@ -77,7 +77,7 @@ const App: React.FC = () => {
             </p>
             <p
               style={{
-                color: COLORS[2],
+                color: COLORS[3],
                 marginBottom: 16,
                 fontSize: 16,
                 borderBottom: "2px solid white",
@@ -96,11 +96,11 @@ const App: React.FC = () => {
               }}
             >
               Please send the payment as{" "}
-              <span style={{ color: COLORS[3], textDecoration: "underline" }}>
+              <span style={{ color: COLORS[2], textDecoration: "underline" }}>
                 ‘friends and family’
               </span>{" "}
               + include your{" "}
-              <span style={{ color: COLORS[3], textDecoration: "underline" }}>
+              <span style={{ color: COLORS[2], textDecoration: "underline" }}>
                 email address
               </span>{" "}
               with the payment
@@ -114,10 +114,10 @@ const App: React.FC = () => {
               }}
             >
               Ticket includes{" "}
-              <span style={{ color: COLORS[2] }}>
+              <span style={{ color: COLORS[3] }}>
                 camping on August 4th & 5th
               </span>{" "}
-              + <span style={{ color: COLORS[2] }}>home cooked meals</span>
+              + <span style={{ color: COLORS[3] }}>home cooked meals</span>
             </p>
             <button
               className="buy-button"
