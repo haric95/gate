@@ -75,8 +75,49 @@ const App: React.FC = () => {
             <p style={{ color: COLORS[0], marginBottom: 24 }}>
               <b>Secret location ~1h from London</b>
             </p>
-            <p style={{ color: COLORS[3], marginBottom: 8, fontSize: 16 }}>
+            <p
+              style={{
+                color: COLORS[2],
+                marginBottom: 16,
+                fontSize: 16,
+                borderBottom: "2px solid white",
+                paddingBottom: 8,
+              }}
+            >
               LINEUP TBA
+            </p>
+
+            <p
+              style={{
+                color: COLORS[0],
+                fontSize: 12,
+                width: "100%",
+                marginBottom: 16,
+              }}
+            >
+              Please send the payment as{" "}
+              <span style={{ color: COLORS[3], textDecoration: "underline" }}>
+                ‘friends and family’
+              </span>{" "}
+              + include your{" "}
+              <span style={{ color: COLORS[3], textDecoration: "underline" }}>
+                email address
+              </span>{" "}
+              with the payment
+            </p>
+            <p
+              style={{
+                color: COLORS[0],
+                fontSize: 12,
+                width: "100%",
+                marginBottom: 16,
+              }}
+            >
+              Ticket includes{" "}
+              <span style={{ color: COLORS[2] }}>
+                camping on August 4th & 5th
+              </span>{" "}
+              + <span style={{ color: COLORS[2] }}>home cooked meals</span>
             </p>
             <button
               className="buy-button"
@@ -103,27 +144,6 @@ const App: React.FC = () => {
             >
               Execute Purchase
             </button>
-            <p
-              style={{
-                color: COLORS[0],
-                fontSize: 12,
-                width: "100%",
-                marginBottom: 16,
-              }}
-            >
-              Please send the payment as ‘friends and family’ + include your
-              email address with the payment
-            </p>
-            <p
-              style={{
-                color: COLORS[0],
-                fontSize: 12,
-                width: "100%",
-                marginBottom: 16,
-              }}
-            >
-              Ticket includes camping on August 4th & 5th + home cooked meals
-            </p>
           </div>
         </div>
         <div
