@@ -134,24 +134,27 @@ $breakpoints: (
   object-fit: cover;
   background-position: center;
   display: flex;
+  justify-content: space-between;
 }
 
 .right {
-  padding-left: 24;
-  padding-right: 16;
+  padding-left: 32px;
+  padding-right: 16px;
   height: 100%;
+  width: calc(100% - 420px);
 }
 
 .ticket-window {
   width: 280px
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
 
   .right {
     padding-left: 0;
     padding-right: 0;
     height: 320px;
+    width: 100%;
 
     .img-1, .img-2, .img-3 {
       object-position: top;
@@ -249,12 +252,6 @@ $breakpoints: (
     }
 
     &.left {
-      margin-right: 36px;
-
-      @include bp('tablet') {
-        margin-right: 0;
-        margin-bottom: 36px;
-      }
     }
   }
 
@@ -467,4 +464,24 @@ $breakpoints: (
   position: absolute;
 }
 
+.password-box {
+  outline: #11af00;
 
+  
+}
+
+
+.left {
+  overflow-y: auto;
+  width: 420px;
+
+  @include bp('tablet') {
+    width: 100%;
+  }
+}
+
+.password-box {
+  margin-bottom: 16px;
+  margin-right: 8px;
+  
+}
