@@ -2,7 +2,7 @@ import React, { useCallback, useEffect, useState } from "react";
 
 const COLORS = ["#ffffff", "#a1d182", "#6dba2d", "#11af00"];
 
-const PASSWORD = "grabaticketeverybody";
+const PASSWORD = "gatetobreakittoyou";
 
 const App: React.FC = () => {
   const [isSlim, setIsSlim] = useState(false);
