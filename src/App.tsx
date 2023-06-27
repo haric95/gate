@@ -110,6 +110,17 @@ const App: React.FC = () => {
               </span>{" "}
               + <span style={{ color: COLORS[2] }}>home cooked meals</span>
             </p>
+
+            <p
+              style={{
+                color: COLORS[0],
+                fontSize: 12,
+                width: "100%",
+                marginBottom: 16,
+              }}
+            >
+              21+
+            </p>
             {hasEnteredPassword ? (
               <button
                 className="buy-button"
