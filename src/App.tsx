@@ -1,8 +1,40 @@
-import React, { useCallback, useEffect, useState } from "react";
+import { Expandable } from "components/expandable";
+import React, { useState } from "react";
 
 const COLORS = ["#ffffff", "#a1d182", "#6dba2d", "#11af00"];
 
 const PASSWORD = "gatetobreakittoyou";
+
+const ARTISTS_LIVE = [
+  "Bubble People",
+  "Craft Ebbing ",
+  "Ella Ex Machina",
+  "ex.sses",
+  "Isn'tses",
+  "Kim Cosmik",
+  "Koruth",
+  "Nosewise",
+  "Scary Hari",
+  "Sokora Mortal",
+  "Torn Relics",
+];
+
+const ARTISTS_DJ = [
+  "DJ Sean Davies",
+  "Dome Zero",
+  "Internal Object",
+  "Lewi Boome",
+  "LNR",
+  "Oddman",
+  "Planet Panama",
+  "proto//spacer",
+  "Seshtan",
+  "sinny",
+  "SKIDOOJACKET",
+  "Waxwing + Rex Domino",
+];
+
+const ARTISTS_PERFORMERS = ["Neo Fung & Laboranta"];
 
 const App: React.FC = () => {
   const [isSlim, setIsSlim] = useState(false);
@@ -16,8 +48,9 @@ const App: React.FC = () => {
     }
   };
 
-  const [[rand1, rand2], _] = useState(() => {
+  const [[rand1, rand2, rand3], _] = useState(() => {
     return [
+      Math.floor(Math.random() * 24) + 1,
       Math.floor(Math.random() * 24) + 1,
       Math.floor(Math.random() * 24) + 1,
     ];
@@ -170,40 +203,83 @@ const App: React.FC = () => {
           className="right"
           style={{
             position: "relative",
+            color: "white",
           }}
         >
-          <img
-            src={`/images/${rand2}.jpg`}
-            style={{
-              width: "100%",
-              objectFit: "contain",
-              height: "100%",
-              position: "absolute",
-            }}
-            className="img-1"
-          />
-          <img
-            src={`/images/${rand1}.jpg`}
-            style={{
-              width: "100%",
-              objectFit: "contain",
-              height: "100%",
-              opacity: 0.5,
-              position: "absolute",
-            }}
-            className="img-2"
-          />
-          <div className={`image-container ${isSlim ? "zoom" : ""}`}>
+          <div
+            className="right-child"
+            style={{ position: "absolute", height: "100%" }}
+          >
+            <h1 style={{ textAlign: "center", color: COLORS[0] }}>Lineup</h1>
+            <div style={{ textAlign: "left" }}>
+              <h4 style={{ color: COLORS[0], fontSize: 24, marginBottom: 8 }}>
+                Live
+              </h4>
+              {ARTISTS_LIVE.map((artist, index) => (
+                <p
+                  key={artist}
+                  style={{ color: COLORS[(index % 3) + 1], fontSize: 16 }}
+                >
+                  {artist}
+                </p>
+              ))}
+            </div>
+            <div style={{ textAlign: "right" }}>
+              <h4 style={{ color: COLORS[0], fontSize: 24, marginBottom: 8 }}>
+                DJ
+              </h4>
+              {ARTISTS_DJ.map((artist, index) => (
+                <p
+                  key={artist}
+                  style={{ color: COLORS[(index % 3) + 1], fontSize: 16 }}
+                >
+                  {artist}
+                </p>
+              ))}
+            </div>
+            <div style={{ textAlign: "left" }}>
+              <h4 style={{ color: COLORS[0], fontSize: 24, marginBottom: 8 }}>
+                Performance
+              </h4>
+              {ARTISTS_PERFORMERS.map((artist, index) => (
+                <p
+                  key={artist}
+                  style={{ color: COLORS[(index % 3) + 1], fontSize: 16 }}
+                >
+                  {artist}
+                </p>
+              ))}
+            </div>
+          </div>
+          <div className="image-container">
             <img
-              src={`/images/sinan.jpeg`}
+              src={`/images/${rand2}.jpg`}
               style={{
                 width: "100%",
                 objectFit: "contain",
-                height: "100%",
                 position: "absolute",
-                opacity: isSlim ? 0.9 : 0,
               }}
-              className={`img-3 play-animation`}
+              className="img-1"
+            />
+            <img
+              src={`/images/${rand1}.jpg`}
+              style={{
+                width: "100%",
+                objectFit: "contain",
+                opacity: 0.5,
+                position: "absolute",
+              }}
+              className="img-2"
+            />
+            <img
+              src={`/images/${rand3}.jpg`}
+              style={{
+                width: "100%",
+                objectFit: "contain",
+                position: "absolute",
+                opacity: 0.5,
+              }}
+              className={`img-3`}
             />
           </div>
         </div>
