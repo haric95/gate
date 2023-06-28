@@ -10,6 +10,7 @@ const ARTISTS_LIVE = [
   "Craft Ebbing ",
   "Ella Ex Machina",
   "ex.sses",
+  "Fiest Soundsystem",
   "Isn'tses",
   "Kim Cosmik",
   "Koruth",
@@ -20,6 +21,7 @@ const ARTISTS_LIVE = [
 ];
 
 const ARTISTS_DJ = [
+  "Ab Ru",
   "DJ Sean Davies",
   "Dome Zero",
   "Internal Object",
