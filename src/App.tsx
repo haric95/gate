@@ -101,17 +101,6 @@ const App: React.FC = () => {
             <p style={{ color: COLORS[0], marginBottom: 24 }}>
               <b>Secret location ~1h from London</b>
             </p>
-            <p
-              style={{
-                color: COLORS[3],
-                marginBottom: 16,
-                fontSize: 16,
-                borderBottom: "2px solid white",
-                paddingBottom: 8,
-              }}
-            >
-              LINEUP TBA
-            </p>
 
             <p
               style={{
@@ -212,7 +201,6 @@ const App: React.FC = () => {
             className="right-child"
             style={{ position: "absolute", height: "100%" }}
           >
-            <h1 style={{ textAlign: "center", color: COLORS[0] }}>Lineup</h1>
             <div style={{ textAlign: "left" }}>
               <h4 style={{ color: COLORS[0], fontSize: 24, marginBottom: 8 }}>
                 Live
