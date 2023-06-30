@@ -28,7 +28,7 @@ const ARTISTS_DJ = [
   "Lewi Boome",
   "LNR",
   "Oddman",
-  "Planet Panama",
+  "Frankie Bubblegum",
   "proto//spacer",
   "Seshtan",
   "sinny",
