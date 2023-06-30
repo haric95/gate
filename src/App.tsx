@@ -10,7 +10,7 @@ const ARTISTS_LIVE = [
   "Craft Ebbing ",
   "Ella Ex Machina",
   "ex.sses",
-  "Fiest Soundsystem",
+  "Fiesta Soundsystem",
   "Isn'tses",
   "Kim Cosmik",
   "Koruth",
