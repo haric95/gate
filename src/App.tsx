@@ -207,7 +207,15 @@ const App: React.FC = () => {
             className="right-child"
             style={{ position: "absolute", height: "100%" }}
           >
-            <h1 style={{ textAlign: "center", marginBottom: 32 }}>Lineup</h1>
+            <h1
+              style={{
+                textAlign: "center",
+                marginBottom: 32,
+                color: COLORS[2],
+              }}
+            >
+              Lineup
+            </h1>
             <div style={{ textAlign: "left", marginBottom: 16 }}>
               <h4 style={{ color: COLORS[0], fontSize: 24, marginBottom: 8 }}>
                 Live
@@ -220,6 +228,7 @@ const App: React.FC = () => {
                   {artist}
                 </p>
               ))}
+              <hr style={{ border: "1px solid white" }} />
             </div>
             <div style={{ textAlign: "right", marginBottom: 16 }}>
               <h4 style={{ color: COLORS[0], fontSize: 24, marginBottom: 8 }}>
@@ -233,6 +242,7 @@ const App: React.FC = () => {
                   {artist}
                 </p>
               ))}
+              <hr style={{ border: "1px solid white" }} />
             </div>
             <div style={{ textAlign: "left" }}>
               <h4 style={{ color: COLORS[0], fontSize: 24, marginBottom: 8 }}>
