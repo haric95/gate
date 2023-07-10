@@ -196,6 +196,7 @@ const App: React.FC = () => {
             )}
           </div>
         </div>
+        <hr className="mobile-divider" />
         <div
           className="right"
           style={{

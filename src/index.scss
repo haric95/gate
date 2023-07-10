@@ -522,8 +522,20 @@ $breakpoints: (
 
 .performers {
   transform: translate(0, -200px);
-  
+
   @include bp('tablet') {
     transform: none;
+  }
+}
+
+.mobile-divider {
+  display: none;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  border-width: 2px;
+  color: #11af00;
+
+  @include bp("tablet") {
+    display: block;
   }
 }
