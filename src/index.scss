@@ -123,15 +123,13 @@ $breakpoints: (
   padding-right: 16px;
   height: 100%;
   width: calc(100% - 452px);
+  overflow-y: auto;
 
   border-left: 2px solid #11af00;
   margin-left: 32px;
 
   .right-child {
     width: calc(100% - 32px);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     padding: 32px;
   }
 
@@ -162,6 +160,7 @@ $breakpoints: (
     margin-left: 0;
     border-left: none;
     margin-top: 32px;
+    overflow-y: unset;
 
     .img-1, .img-2, .img-3 {
       object-position: top;
@@ -472,6 +471,14 @@ $breakpoints: (
 
 .img-1 {
   position: relative;
+}
+
+.img-2 {
+  transform: translate(40px, 80px);
+}
+
+.img-3 {
+  transform: translate(10px, 160px);
 }
 
 .img-1::before {

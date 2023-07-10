@@ -14,6 +14,7 @@ const ARTISTS_LIVE = [
   "Isn'tses",
   "Kim Cosmik",
   "Koruth",
+  "Marysia Osu + YUIS",
   "Nosewise",
   "Scary Hari",
   "Sokora Mortal",
@@ -36,7 +37,12 @@ const ARTISTS_DJ = [
   "Waxwing + Rex Domino",
 ];
 
-const ARTISTS_PERFORMERS = ["Neo Fung & Laboranta"];
+const ARTISTS_PERFORMERS = [
+  "Madi Plunkett",
+  "Neo Fung & Laboranta",
+  "Olive Hardy",
+  "Phoebe Lo",
+];
 
 const App: React.FC = () => {
   const [isSlim, setIsSlim] = useState(false);
@@ -201,7 +207,8 @@ const App: React.FC = () => {
             className="right-child"
             style={{ position: "absolute", height: "100%" }}
           >
-            <div style={{ textAlign: "left" }}>
+            <h1 style={{ textAlign: "center", marginBottom: 32 }}>Lineup</h1>
+            <div style={{ textAlign: "left", marginBottom: 16 }}>
               <h4 style={{ color: COLORS[0], fontSize: 24, marginBottom: 8 }}>
                 Live
               </h4>
@@ -214,7 +221,7 @@ const App: React.FC = () => {
                 </p>
               ))}
             </div>
-            <div style={{ textAlign: "right" }}>
+            <div style={{ textAlign: "right", marginBottom: 16 }}>
               <h4 style={{ color: COLORS[0], fontSize: 24, marginBottom: 8 }}>
                 DJ
               </h4>
@@ -248,6 +255,7 @@ const App: React.FC = () => {
                 width: "100%",
                 objectFit: "contain",
                 position: "absolute",
+                opacity: 0.9,
               }}
               className="img-1"
             />
@@ -256,7 +264,7 @@ const App: React.FC = () => {
               style={{
                 width: "100%",
                 objectFit: "contain",
-                opacity: 0.5,
+                opacity: 0.9,
                 position: "absolute",
               }}
               className="img-2"
@@ -267,7 +275,7 @@ const App: React.FC = () => {
                 width: "100%",
                 objectFit: "contain",
                 position: "absolute",
-                opacity: 0.5,
+                opacity: 0.9,
               }}
               className={`img-3`}
             />
