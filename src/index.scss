@@ -511,3 +511,19 @@ $breakpoints: (
   margin-right: 8px;
   
 }
+
+.djs {
+  transform: translate(0, -100px);
+
+  @include bp('tablet') {
+    transform: none;
+  }
+}
+
+.performers {
+  transform: translate(0, -200px);
+  
+  @include bp('tablet') {
+    transform: none;
+  }
+}

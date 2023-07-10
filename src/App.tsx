@@ -228,9 +228,11 @@ const App: React.FC = () => {
                   {artist}
                 </p>
               ))}
-              <hr style={{ border: "1px solid white" }} />
             </div>
-            <div style={{ textAlign: "right", marginBottom: 16 }}>
+            <div
+              style={{ textAlign: "right", marginBottom: 16 }}
+              className="djs"
+            >
               <h4 style={{ color: COLORS[0], fontSize: 24, marginBottom: 8 }}>
                 DJ
               </h4>
@@ -242,9 +244,8 @@ const App: React.FC = () => {
                   {artist}
                 </p>
               ))}
-              <hr style={{ border: "1px solid white" }} />
             </div>
-            <div style={{ textAlign: "left" }}>
+            <div style={{ textAlign: "left" }} className="performers">
               <h4 style={{ color: COLORS[0], fontSize: 24, marginBottom: 8 }}>
                 Performance
               </h4>
