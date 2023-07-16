@@ -301,10 +301,10 @@ const App: React.FC = () => {
                   Saturday Afternoon
                 </p>
                 <h4 style={{ color: COLORS[0], fontSize: 16, marginBottom: 8 }}>
-                  Moroccan Cous-Cous with BBQ Veg, Pickles and Yoghurt
+                  Moroccan Couscous with BBQ Veg, Pickles and Yoghurt
                 </h4>
                 <p style={{ fontSize: 12, color: COLORS[2] }}>
-                  Spiced cous-cous topped with barbecued courgette, peppers and
+                  Spiced couscous topped with barbecued courgette, peppers and
                   onions
                 </p>
               </div>

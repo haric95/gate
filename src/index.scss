@@ -143,8 +143,12 @@ $breakpoints: (
     opacity: 0.2;
     object-fit: cover;
 
+    @include bp('tablet') {
+      transform: translateY(-1200px);
+    }
+
     img {
-      filter: brightness(1)
+      filter: brightness(1);
     }
   }
 }
@@ -481,11 +485,11 @@ $breakpoints: (
 }
 
 .img-2 {
-  transform: translate(40px, 25%);
+  transform: translate(80px, 80%);
 }
 
 .img-3 {
-  transform: translate(10px, 50%);
+  transform: translate(40px, 160%);
 }
 
 .img-1::before {
