@@ -213,14 +213,10 @@ const App: React.FC = () => {
         <div
           className="right"
           style={{
-            position: "relative",
             color: "white",
           }}
         >
-          <div
-            className="right-child"
-            style={{ position: "absolute", height: "100%" }}
-          >
+          <div className="right-child" style={{ height: "100%" }}>
             <h1
               style={{
                 textAlign: "center",
@@ -271,6 +267,72 @@ const App: React.FC = () => {
                   {artist}
                 </p>
               ))}
+            </div>
+            <div
+              style={{
+                textAlign: "left",
+                display: "flex",
+                flexDirection: "column",
+              }}
+              className="menu-offset"
+            >
+              <h1
+                style={{
+                  textAlign: "center",
+                  marginBottom: 32,
+                  color: COLORS[2],
+                  opacity: 0.8,
+                }}
+              >
+                Menu
+              </h1>
+              <div className="menu-container">
+                <p style={{ fontSize: 8, color: COLORS[3] }}>Friday Evening</p>
+                <h4 style={{ color: COLORS[0], fontSize: 16, marginBottom: 8 }}>
+                  Black Lentil Daal with Basmati Rice and Pickle
+                </h4>
+                <p style={{ fontSize: 12, color: COLORS[2] }}>
+                  Lentils slow-cooked with warm spices and vegan butter. Served
+                  with basmati rice and a spicy onion pickle.
+                </p>
+              </div>
+              <div className="menu-container menu-right">
+                <p style={{ fontSize: 8, color: COLORS[3] }}>
+                  Saturday Afternoon
+                </p>
+                <h4 style={{ color: COLORS[0], fontSize: 16, marginBottom: 8 }}>
+                  Moroccan Cous-Cous with BBQ Veg, Pickles and Yoghurt
+                </h4>
+                <p style={{ fontSize: 12, color: COLORS[2] }}>
+                  Spiced cous-cous topped with barbecued courgette, peppers and
+                  onions
+                </p>
+              </div>
+              <div className="menu-container">
+                <p style={{ fontSize: 8, color: COLORS[3] }}>
+                  Saturday Evening
+                </p>
+                <h4 style={{ color: COLORS[0], fontSize: 16, marginBottom: 8 }}>
+                  Jerk Cauliflower with Rice and Peas and Mango Sauce
+                </h4>
+                <p style={{ fontSize: 12, color: COLORS[2] }}>
+                  Smokey marinated cauliflower, barbecued and served on rice
+                  with a sweet mango sauce
+                </p>
+              </div>
+              <div className="menu-container menu-right">
+                <p style={{ fontSize: 8, color: COLORS[3] }}>
+                  Sunday Afternoon
+                </p>
+                <h4 style={{ color: COLORS[0], fontSize: 16, marginBottom: 8 }}>
+                  Morioka Reimen
+                </h4>
+                <p style={{ fontSize: 12, color: COLORS[2] }}>
+                  One of the Three Great Noodles of Morioka, chewy noodles are
+                  served in a chilled, rich broth and topped with kimchi and a
+                  slice of watermelon
+                </p>
+              </div>
             </div>
           </div>
           <div className="image-container">

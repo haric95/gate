@@ -124,6 +124,8 @@ $breakpoints: (
   height: 100%;
   width: calc(100% - 452px);
   overflow-y: auto;
+  overflow-x: hidden;
+  position: relative;
 
   border-left: 2px solid #11af00;
   margin-left: 32px;
@@ -131,6 +133,7 @@ $breakpoints: (
   .right-child {
     width: calc(100% - 32px);
     padding: 32px;
+    position: absolute;
   }
 
   .image-container {
@@ -160,23 +163,25 @@ $breakpoints: (
     margin-left: 0;
     border-left: none;
     margin-top: 32px;
-    overflow-y: unset;
+    position: static;
+    height: fit-content;
 
     .img-1, .img-2, .img-3 {
       object-position: top;
     }
 
     .img-2 {
-      transform: translate(40px, 300px)
+      transform: translate(25%, 120%)
     }
 
     .img-3 {
-      transform: translate(0px, 600px)
+      transform: translate(10%, 240%)
     }
 
     .right-child {
       width: 100%;
       padding: 0;
+      position: static;
     }
   }
 
@@ -188,6 +193,7 @@ $breakpoints: (
     display: block;
     height: 100%;
     overflow-y: scroll;
+    overflow-x: hidden;
   }
 }
 
@@ -359,6 +365,7 @@ $breakpoints: (
   .right {
     text-align: right;
     overflow-y: auto;
+    height: unset;
   }
 }
 
@@ -474,11 +481,11 @@ $breakpoints: (
 }
 
 .img-2 {
-  transform: translate(40px, 80px);
+  transform: translate(40px, 25%);
 }
 
 .img-3 {
-  transform: translate(10px, 160px);
+  transform: translate(10px, 50%);
 }
 
 .img-1::before {
@@ -499,6 +506,7 @@ $breakpoints: (
 
 .left {
   overflow-y: auto;
+  overflow-x: hidden;
   width: 420px;
 
   @include bp('tablet') {
@@ -537,5 +545,34 @@ $breakpoints: (
 
   @include bp("tablet") {
     display: block;
+  }
+}
+
+.menu-container {
+  width: 75%;
+  margin-bottom: 48px;
+  border-left: 2px solid #11af00;
+  padding-left: 16px;
+  padding-right: 16px;
+
+  @include bp("tablet") {
+    width: 100%;
+  }
+
+  &.menu-right {
+    margin-left: 25%;
+
+    @include bp("tablet") {
+      margin-left: 0%;
+    }
+  }
+}
+
+.menu-offset {
+  transform: translateY(-100px);
+
+  @include bp('tablet') {
+    margin-top: 64px;
+    transform: translateY(0px)
   }
 }
