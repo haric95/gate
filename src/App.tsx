@@ -182,6 +182,19 @@ const App: React.FC = () => {
                 <p style={{ marginBottom: 8, color: COLORS[3] }}>
                   Enter password to continue with purchase.
                 </p>
+                <p style={{ marginBottom: 8, color: COLORS[0], fontSize: 12 }}>
+                  Send us a message on Instagram{" "}
+                  <a
+                    href="https://instagram.com/gatheralltheelectronics"
+                    style={{ color: COLORS[2] }}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    @gatheralltheelectronics
+                  </a>{" "}
+                  for the password
+                </p>
+                <p></p>
                 <div>
                   <p style={{ fontSize: 12 }}>Password</p>
                   <input
