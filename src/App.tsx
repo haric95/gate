@@ -4,6 +4,8 @@ import React, { useState } from "react";
 const COLORS = ["#ffffff", "#a1d182", "#6dba2d", "#11af00"];
 
 const PASSWORD = "gatetobreakittoyou";
+const DAY_TICKET_PASSWORD = "bettergatethannever";
+const ALT_DAY_TICKET_PASSWORD = "bettergatethennever";
 
 const ARTISTS_LIVE = [
   "Bubble People",
@@ -47,12 +49,19 @@ const ARTISTS_PERFORMERS = [
 const App: React.FC = () => {
   const [isSlim, setIsSlim] = useState(false);
   const [hasEnteredPassword, setHasEnteredPassword] = useState(false);
+  const [isDayTicket, setIsDayTicket] = useState(false);
   const [passwordValue, setPasswordValue] = useState("");
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setPasswordValue(e.target.value);
     if (e.target.value === PASSWORD) {
       setHasEnteredPassword(true);
+    } else if (
+      e.target.value === DAY_TICKET_PASSWORD ||
+      e.target.value === ALT_DAY_TICKET_PASSWORD
+    ) {
+      setHasEnteredPassword(true);
+      setIsDayTicket(true);
     }
   };
 
@@ -84,7 +93,14 @@ const App: React.FC = () => {
           <div className="ticket-window left">
             <p style={{ color: COLORS[0] }}>Aug 4th - Aug 6th</p>
             <p style={{ color: COLORS[1] }}>
-              <b>£75</b>
+              <b
+                style={{
+                  textDecoration: isDayTicket ? "line-through" : "none",
+                }}
+              >
+                £75
+              </b>
+              {isDayTicket && <b> £50</b>}
             </p>
             <p style={{ color: COLORS[2], marginBottom: 24 }}>
               <b>120 bodies</b>
@@ -162,7 +178,9 @@ const App: React.FC = () => {
                 }}
                 onClick={() =>
                   window.open(
-                    "https://www.paypal.com/paypalme/gatecollective/75",
+                    `https://www.paypal.com/paypalme/gatecollective/${
+                      isDayTicket ? "50" : "75"
+                    }`,
                     "_blank"
                   )
                 }
@@ -175,7 +193,7 @@ const App: React.FC = () => {
                   fontSize: 16,
                 }}
               >
-                Execute Purchase
+                {isDayTicket ? "Purchase Day Ticket" : "Execute Purchase"}
               </button>
             ) : (
               <div style={{ color: COLORS[0], marginTop: 24 }}>
@@ -333,6 +351,10 @@ const App: React.FC = () => {
                   slice of watermelon
                 </p>
               </div>
+              <p style={{ fontSize: 8 }}>
+                All meals are vegan. Please let us know in advance if you have
+                any special dietary requirements.
+              </p>
             </div>
           </div>
           <div className="image-container">
