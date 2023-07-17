@@ -142,20 +142,38 @@ const App: React.FC = () => {
               </span>{" "}
               with the payment
             </p>
-            <p
-              style={{
-                color: COLORS[0],
-                fontSize: 12,
-                width: "100%",
-                marginBottom: 16,
-              }}
-            >
-              Ticket includes{" "}
-              <span style={{ color: COLORS[2] }}>
-                camping on August 4th & 5th
-              </span>{" "}
-              + <span style={{ color: COLORS[2] }}>home cooked meals</span>
-            </p>
+            {isDayTicket ? (
+              <p
+                style={{
+                  color: COLORS[0],
+                  fontSize: 12,
+                  width: "100%",
+                  marginBottom: 16,
+                }}
+              >
+                Day ticket includes{" "}
+                <span style={{ color: COLORS[2] }}>
+                  camping on August 4th or 5th
+                </span>{" "}
+                +{" "}
+                <span style={{ color: COLORS[2] }}>two home cooked meals</span>
+              </p>
+            ) : (
+              <p
+                style={{
+                  color: COLORS[0],
+                  fontSize: 12,
+                  width: "100%",
+                  marginBottom: 16,
+                }}
+              >
+                Ticket includes{" "}
+                <span style={{ color: COLORS[2] }}>
+                  camping on August 4th & 5th
+                </span>{" "}
+                + <span style={{ color: COLORS[2] }}>home cooked meals</span>
+              </p>
+            )}
 
             <p
               style={{
