@@ -153,7 +153,8 @@ const App: React.FC = () => {
               >
                 Day ticket includes{" "}
                 <span style={{ color: COLORS[2] }}>
-                  camping on August 4th or 5th
+                  camping on August 4th{" "}
+                  <span style={{ textDecoration: "underline" }}>or</span> 5th
                 </span>{" "}
                 +{" "}
                 <span style={{ color: COLORS[2] }}>two home cooked meals</span>
