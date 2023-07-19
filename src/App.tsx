@@ -85,7 +85,7 @@ const ARTISTS_DJ: Artist[] = [
 
 const ARTISTS_PERFORMERS: Artist[] = [
   { name: "Madi Plunkett", bio: "" },
-  { name: "Neo Fung & Laboranta", bio: "" },
+  { name: "Neo Fung & Laboranta", bio: "", isGate: true },
   { name: "Olive Hardy", bio: "" },
   { name: "Phoebe Lo", bio: "" },
 ];
@@ -353,6 +353,17 @@ const App: React.FC = () => {
                           : "+ "
                         : ""}
                       {artist.name}
+                      {artist.isGate ? (
+                        <img
+                          src="/images/gate-logo.svg"
+                          style={{
+                            width: 28,
+                            marginLeft: 4,
+                            transform: "rotate(-15deg)",
+                            filter: "brightness(6)",
+                          }}
+                        />
+                      ) : null}
                     </p>
                   }
                   description={artist.bio ?? ""}
@@ -375,14 +386,27 @@ const App: React.FC = () => {
                   key={artist.name}
                   isOpen={openArtistName === artist.name}
                   trigger={
-                    <p style={{ color: COLORS[(index % 3) + 1] }}>
-                      {artist.name}
-                      {artist.bio
-                        ? artist.name === openArtistName
-                          ? " -"
-                          : " +"
-                        : ""}
-                    </p>
+                    <>
+                      <p style={{ color: COLORS[(index % 3) + 1] }}>
+                        {artist.isGate ? (
+                          <img
+                            src="/images/gate-logo.svg"
+                            style={{
+                              width: 28,
+                              marginRight: 4,
+                              transform: "rotate(-15deg)",
+                              filter: "brightness(6)",
+                            }}
+                          />
+                        ) : null}
+                        {artist.name}
+                        {artist.bio
+                          ? artist.name === openArtistName
+                            ? " -"
+                            : " +"
+                          : ""}
+                      </p>
+                    </>
                   }
                   description={artist.bio ?? ""}
                   set={() => setOpenArtistName(artist.name)}
@@ -408,6 +432,17 @@ const App: React.FC = () => {
                           : "+ "
                         : ""}
                       {artist.name}
+                      {artist.isGate ? (
+                        <img
+                          src="/images/gate-logo.svg"
+                          style={{
+                            width: 28,
+                            marginLeft: 4,
+                            transform: "rotate(-15deg)",
+                            filter: "brightness(6)",
+                          }}
+                        />
+                      ) : null}
                     </p>
                   }
                   description={artist.bio ?? ""}

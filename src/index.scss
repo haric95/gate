@@ -547,9 +547,11 @@ $breakpoints: (
 
 .performers {
   transform: translate(0, -200px);
-
+  width: 75%; 
+  
   @include bp('tablet') {
     transform: none;
+    width: 100%; 
   }
 }
 
