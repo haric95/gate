@@ -7,43 +7,84 @@ const PASSWORD = "gatetobreakittoyou";
 const DAY_TICKET_PASSWORD = "bettergatethannever";
 const ALT_DAY_TICKET_PASSWORD = "bettergatethennever";
 
-const ARTISTS_LIVE = [
-  "Bubble People",
-  "Craft Ebbing ",
-  "Ella Ex Machina",
-  "ex.sses",
-  "Fiesta Soundsystem",
-  "Isn'tses",
-  "Kim Cosmik",
-  "Koruth",
-  "Marysia Osu + YUIS",
-  "Nosewise",
-  "Scary Hari",
-  "Sokora Mortal",
-  "Torn Relics",
+type Artist = { name: string; bio?: string };
+
+const ARTISTS_LIVE: Artist[] = [
+  { name: "Bubble People", bio: "" },
+  { name: "Craft Ebbing", bio: "" },
+  { name: "Ella Ex Machina", bio: "" },
+  {
+    name: "Fiesta Soundsystem",
+    bio: "Fiesta soundsystem presents a new live performance project built from a mountain of homemade sequencing and sampling software, freeing traditional jungle and techno sounds from their familiar strict linear frameworks into chaotic nonlinearity and rhythmic recursion.",
+  },
+  {
+    name: "ex.sses",
+    bio: "ex.sses (she/they) is an experimental sound artist, electronic producer and DJ. She initially came on the scene in 2018 as the founder of Earwax, an ongoing project based platform for sound artists of marginalised genders. ex.sses’ ties to experimental sound and club culture have since manifested in EP releases Relic (Cherche Encore, 2021), Buried (Hard Return, 2021) and most recently Scanner (TT, 2022) which premiered on DJ Mag. As well as singles for compilations including Pollination and Earful of WAV’s out this year. These releases, in addition to their online presence, have gained attention over the past year, resulting in dark, club-focused DJ sets for HÖR, Keep Hush, Circadian Rhythms and electronic live performances for Comic Sans label tour, Hidden Door Festival and Iklectik that expand on ex.sses’ exploration of sonic intimacy, hauntology and the gendered body.",
+  },
+  { name: "Isn'tses", bio: "" },
+  {
+    name: "Kim Cosmik",
+    bio: "Kim Cosmik started as a DJ with Sprial Tribe and Bedlam, playing at festivals and clubs all over the U.K and Europe as well as the legendary Knowledge Club in SW1. She has released music through her label Cybersoul on Bandcamp, as well as with a variety of labels such as 2020 Vision Recordings, Science Cult, Diffuse Reality, Touched Music, Section 27, Bass Agenda, Urban Connections, Zwaartekracht and many more. She formed her own label, Void Records in partnership with Hotmix / Bunker records in Holland and then Void was later signed to Matador EMI. Other aliases include Siren, a drum and bass project with Blaze on Spectrum Audio / Alphamagic, collaborating with Dj Damage. Kim Cosmik has played with many amazing artists such as Lory D, Leo Anibaldi, Colin Dale, Serge Clone, Aleksi Perala, Andy Turner, B12, Radioactiveman and many more. Kim Cosmik is currently a resident at www.threadsradio.com, www.techno-club.net and her own event Hybrid which she launched in 2019. ",
+  },
+  {
+    name: "Koruth",
+    bio: "Koruth is the musical project of painter Anna Ruth. A ballad without words. Intuitive soundscape created on the spot. Endless loops of voice and flutes distorted by multiplication. Transparent sound sources dissolved into a chaotic ambient trance.",
+  },
+  {
+    name: "Marysia Osu + YUIS",
+    bio: 'Marysia Osu is a Polish harpist and producer based in London. Using electronics she expands the natural sound of her instrument. Her music is the result of combining "harp, beats & dreams." She will be joined by YUIS on the flute.',
+  },
+  {
+    name: "Nosewise",
+    bio: "This live set from Nosewise is a new project from the co-founder of label Twin System & the producer/DJ also known as Flytipper. Reconciling what have until now been disparate parts of their practice, it’ll feature guitar and vocal performance informed by jazz & new-wave, over a bed of hypnotic, richly textured production.",
+  },
+  { name: "Scary Hari", bio: "(v scary)" },
+  { name: "Sokora Mortal", bio: "" },
+  {
+    name: "Torn Relics",
+    bio: "The London based experimental duo, Torn Relics comprises of Romek Boyer (AKA Rommek) & Aimée Mullen. The body of their work is a mixture of cyber- punk electronics with tribalistic violin, rhythms and tones. Genre bending and tension riding, is all part of the duo’s enigmatic and high energy live performances. They duo have graced the stage across UK and Europe, including Berlin, Bulgaria, Latvia, Greece to name a few. The Poisoned Chalice was the first release form Torn Relics, which came out on Sacred Court in 2019 and included a remix from SNTS. Abolish The Dogma, was the duos debut 8-track album, released in 2020 on Leyla records and their latest LP 'Burning Injustice' Was release on the Berlin based label Instrument Of Discipline. Torn Relics are the Founders of Arcane, the London based event series, focusing on boundary live pushing performances. Together they curate and select artists with a propensity to spear through the noise of conventional production and performance norms. Guest artists include Samuel Kerridge, Iron Sight, Slow White Fall (aka broken English Club), Eraldo Bernocchi, Fresnel Lens to name a few.",
+  },
 ];
 
-const ARTISTS_DJ = [
-  "Ab Ru",
-  "DJ Sean Davies",
-  "Dome Zero",
-  "Internal Object",
-  "Lewi Boome",
-  "LNR",
-  "Oddman",
-  "Frankie Bubblegum",
-  "proto//spacer",
-  "Seshtan",
-  "sinny",
-  "SKIDOOJACKET",
-  "Waxwing + Rex Domino",
+const ARTISTS_DJ: Artist[] = [
+  { name: "Ab Ru", bio: "" },
+  { name: "DJ Sean Davies", bio: "" },
+  {
+    name: "Dome Zero",
+    bio: "Dome Zero makes music that emphasises off-guard abrasiveness and rhythmic inventiveness. This mixture of terror and lark has seen released across labels such as Accidental Meeting and Egregore Collective, as well as a debut EP for All Centre. In his spare time, he indulges himself by writing about music (yawn) and repeatedly watching YouTube clips of TV shows he’s already seen. His set for GATE will be a rare daylight excursion, what the rays of sunshine will bring out is yet to be seen…",
+  },
+  { name: "Internal Object", bio: "" },
+  {
+    name: "Lewi Boome",
+    bio: "Lewi Boome is a London based DJ and producer who co-runs the blossoming Twin System label whilst being a Kindred and Noods regular. Lewi’s sound reflects his deep appreciation and knowledge of the many sides that electronic music has to offer and sees him deftly dance the line between fun, dark and twisted in a way that results in beautifully controlled chaos. Expect dizzying rhythms and warped textures that travel through a range of off-kilter club tracks, drawing from all corners of the spectrum which will leave your mind melted.",
+  },
+  {
+    name: "LNR",
+    bio: "LNR is a DJ and music journalist from the UK currently based in Amsterdam. She classes herself as a fan rather than an artist, spending hours digging for old school vinyl along the spectrum of wonky psychedelic controlled chaos. Fiercely passionate for the free party scene, she tries to create an otherworldly journey rooted in subcultural history that spans techno, trance, rave, and jungle.",
+  },
+  {
+    name: "Oddman",
+    bio: "this guy is so SICK man he like spray paints his head and wears goretex, sick",
+  },
+  { name: "Frankie Bubblegum", bio: "" },
+  { name: "proto//spacer", bio: "" },
+  { name: "Seshtan", bio: "" },
+  {
+    name: "sinny",
+    bio: "sinny's purile need to impress those around him can be heard clearly in his try-hard sets that are more often than not, very mid. drawing from a narrow range of music that he has aquired through his youtube recommended videos or sponsored ads on instagram, sinny gives little thought to his selection an instead opts for a 'style over substance' approach by trying to create intrigue through an unappealing mask that he can be seen wearing during his sets. sinny relies heavily on gimmicks such as wheel ups and chopping unrhythimcally much to the annoyance of the audience, however, his sets provide a great opportunity to go for a ciggy break, catch up with friends or watch paint dry.",
+  },
+  { name: "SKIDOOJACKET", bio: "" },
+  {
+    name: "Waxwing + Rex Domino",
+    bio: "Diversion is a South London club night known for its intimate chaos. Created by Waxwing, the event provides a supportive and pressure-free environment for both established and up-and-coming DJs to experiment and play. Resident host/MC, Horse Militia's Rex Domino, punctuates the night. Sprawling dubbed vocals, seasoned with delay, aim to collaborate with the DJs' selections rather than overshadow them. A custom-built dub siren is always on hand to further elevate the mood. As a selector, Waxwing draws from the realms of Dub and Dance-floor with equal enthusiasm, crafting a thoughtful sonic landscape that you can still shake several legs at.",
+  },
 ];
 
-const ARTISTS_PERFORMERS = [
-  "Madi Plunkett",
-  "Neo Fung & Laboranta",
-  "Olive Hardy",
-  "Phoebe Lo",
+const ARTISTS_PERFORMERS: Artist[] = [
+  { name: "Madi Plunkett", bio: "" },
+  { name: "Neo Fung & Laboranta", bio: "" },
+  { name: "Olive Hardy", bio: "" },
+  { name: "Phoebe Lo", bio: "" },
 ];
 
 const App: React.FC = () => {
@@ -51,6 +92,8 @@ const App: React.FC = () => {
   const [hasEnteredPassword, setHasEnteredPassword] = useState(false);
   const [isDayTicket, setIsDayTicket] = useState(false);
   const [passwordValue, setPasswordValue] = useState("");
+
+  const [openArtistName, setOpenArtistName] = useState<string | null>(null);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setPasswordValue(e.target.value);
@@ -268,12 +311,19 @@ const App: React.FC = () => {
                 Live
               </h4>
               {ARTISTS_LIVE.map((artist, index) => (
-                <p
-                  key={artist}
-                  style={{ color: COLORS[(index % 3) + 1], fontSize: 16 }}
+                <Expandable
+                  isOpen={artist.name === openArtistName}
+                  title={artist.name}
+                  align="left"
+                  set={() => {
+                    setOpenArtistName(artist.name);
+                  }}
+                  key={artist.name}
                 >
-                  {artist}
-                </p>
+                  <p style={{ color: COLORS[(index % 3) + 1], fontSize: 16 }}>
+                    {artist.bio}
+                  </p>
+                </Expandable>
               ))}
             </div>
             <div
@@ -284,12 +334,22 @@ const App: React.FC = () => {
                 DJ
               </h4>
               {ARTISTS_DJ.map((artist, index) => (
-                <p
-                  key={artist}
-                  style={{ color: COLORS[(index % 3) + 1], fontSize: 16 }}
+                <Expandable
+                  isOpen={artist.name === openArtistName}
+                  title={artist.name}
+                  align="left"
+                  set={() => {
+                    console.log("wooo");
+                  }}
+                  key={artist.name}
                 >
-                  {artist}
-                </p>
+                  <p
+                    key={artist.name}
+                    style={{ color: COLORS[(index % 3) + 1], fontSize: 16 }}
+                  >
+                    {artist.bio}
+                  </p>
+                </Expandable>
               ))}
             </div>
             <div style={{ textAlign: "left" }} className="performers">
@@ -297,12 +357,22 @@ const App: React.FC = () => {
                 Performance
               </h4>
               {ARTISTS_PERFORMERS.map((artist, index) => (
-                <p
-                  key={artist}
-                  style={{ color: COLORS[(index % 3) + 1], fontSize: 16 }}
+                <Expandable
+                  isOpen={artist.name === openArtistName}
+                  title={artist.name}
+                  align="left"
+                  set={() => {
+                    setOpenArtistName(artist.name);
+                  }}
+                  key={artist.name}
                 >
-                  {artist}
-                </p>
+                  <p
+                    key={artist.name}
+                    style={{ color: COLORS[(index % 3) + 1], fontSize: 16 }}
+                  >
+                    {artist.bio}
+                  </p>
+                </Expandable>
               ))}
             </div>
             <div
