@@ -329,7 +329,7 @@ const App: React.FC = () => {
                 </h4>
                 <p style={{ fontSize: 12, color: COLORS[2] }}>
                   Lentils slow-cooked with warm spices and vegan butter. Served
-                  with basmati rice and a spicy onion pickle.
+                  with basmati rice and a spicy onion pickle
                 </p>
               </div>
               <div className="menu-container menu-right">
