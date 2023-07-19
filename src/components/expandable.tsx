@@ -1,38 +1,32 @@
 import React from "react";
-import Collapsible from "react-collapsible";
+import Collapsible, { CollapsibleProps } from "react-collapsible";
 
 type ExpandableProps = {
   isOpen: boolean;
-  title: string;
+  trigger: CollapsibleProps["trigger"];
   description?: string;
-  set: (val: string | null) => void;
-  align: "left" | "right";
+  set: () => void;
+  unset: () => void;
 };
 
 export const Expandable: React.FC<ExpandableProps> = ({
   isOpen,
-  title,
+  trigger,
   description,
   set,
-  align,
+  unset,
 }) => {
   const isActive = !!description;
   return (
     <Collapsible
       className={`collapsible ${isActive ? "active" : "inactive"}`}
-      trigger={
-        isActive
-          ? `${align === "left" ? (isOpen ? "- " : "+ ") : ""} ${title} ${
-              align === "right" ? (isOpen ? "-" : "+") : ""
-            }`
-          : title
-      }
+      trigger={trigger}
       handleTriggerClick={() => {
         if (isActive) {
           if (isOpen) {
-            set(null);
+            unset();
           } else {
-            set(title);
+            set();
           }
         }
       }}
