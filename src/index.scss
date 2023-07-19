@@ -6,6 +6,17 @@ $propagate-green-2: #00ee00;
 $gutter-size-desktop: 64px;
 $gutter-size-mobile: 32px;
 
+.right, .left {
+  scrollbar-width: none;
+}
+
+.right::-webkit-scrollbar, .left::-webkit-scrollbar {
+  -webkit-appearance: none;
+  display: none;
+  width: 0 !important
+}
+
+
 .play-animation {
   animation: shake 0.5s infinite;
   animation-iteration-count: infinite;
@@ -21,7 +32,7 @@ $gutter-size-mobile: 32px;
 // Mixins
 $breakpoints: (
   'mobile': 480px,
-  'tablet': 768px,
+  'tablet': 1024px,
   'laptop': 1200px,
 ) !default;
 
@@ -87,7 +98,7 @@ canvas {
 // Mixins
 $breakpoints: (
   "mobile": 480px,
-  "tablet": 768px,
+  "tablet": 1024px,
   "laptop": 1200px,
 ) !default;
 
@@ -160,7 +171,7 @@ $breakpoints: (
   width: 280px
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
 
   .right {
     padding-left: 0;
