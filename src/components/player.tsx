@@ -1,6 +1,7 @@
 import React, { PropsWithChildren, useEffect, useRef, useState } from "react";
 import ReactPlayer from "react-player";
 import { IoMdPause, IoMdPlay } from "react-icons/io";
+import { BiLinkExternal } from "react-icons/bi";
 
 type PlayerProps = { link?: string; title?: string; artist?: string };
 
@@ -89,12 +90,23 @@ export const Player: React.FC<PlayerProps> = ({
           ></div>
         </div>
       </div> */}
-        <button
-          className="autoplay"
-          onClick={() => setAutoplayOn((prev) => !prev)}
-        >
-          {autoplayOn ? "Autoplay Is On" : "Autoplay Is Off"}
-        </button>
+        <div style={{ textAlign: "right", display: "flex" }}>
+          <button
+            className={`autoplay`}
+            onClick={() => setAutoplayOn((prev) => !prev)}
+          >
+            {autoplayOn ? "Autoplay Is On" : "Autoplay Is Off"}
+          </button>
+          <button
+            className={`external  ${link ? "" : "disabled"}`}
+            onClick={() => {
+              setIsPlaying(false);
+              window.open(link, "_blank")?.focus();
+            }}
+          >
+            <BiLinkExternal />
+          </button>
+        </div>
       </div>
     </>
   );
