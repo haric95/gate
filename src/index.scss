@@ -6,15 +6,15 @@ $propagate-green-2: #00ee00;
 $gutter-size-desktop: 64px;
 $gutter-size-mobile: 32px;
 
-.right, .left {
-  scrollbar-width: none;
-}
+// .right, .left {
+//   scrollbar-width: none;
+// }
 
-.right::-webkit-scrollbar, .left::-webkit-scrollbar {
-  -webkit-appearance: none;
-  display: none;
-  width: 0 !important
-}
+// .right::-webkit-scrollbar, .left::-webkit-scrollbar {
+//   -webkit-appearance: none;
+//   display: none;
+//   width: 0 !important
+// }
 
 
 .play-animation {
@@ -605,4 +605,84 @@ $breakpoints: (
     margin-top: 64px;
     transform: translateY(0px)
   }
+}
+
+
+.player-container {
+  z-index: 1;
+  position: fixed;
+  height: 52px;
+  width: 240px;
+  bottom: 0;
+  right: 0;
+  background-color: black;
+  opacity: 0.8;
+  transform: translate(-24px, -24px);
+
+  @include bp('tablet') {
+    transform: none;
+    width: 100vw;
+  }
+}
+
+.player {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  padding: 8px;
+  align-items: center;
+  z-index: 100;
+  justify-content: space-between;
+
+  .player-left {
+    display: flex;
+    height: 100%;
+    align-items: center;
+  }
+
+
+  .play-button {
+    height: 32px;
+    width: 32px;
+    border-radius: 0;
+    border: 0;
+    cursor: pointer;
+
+    svg {
+      transform: translateY(2px);
+    }
+
+    &.disabled {
+      opacity: 0.5;
+      cursor: help;
+    }
+  }
+
+  .track-info {
+    margin-left: 8px;
+    color: #11af00;
+
+    .track-artist {
+      font-size: 12px;
+    }
+
+    .track-title {
+      font-size: 8px;
+    }
+  }
+
+  .autoplay {
+    font-size: 8px;
+    background: none;
+    text-decoration: underline;
+    border: 0;
+    cursor: pointer;
+    justify-self: flex-end;
+    align-self: flex-end;
+    color: white;
+  }
+}
+
+.bar-container {
+
 }

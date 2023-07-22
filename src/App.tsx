@@ -1,5 +1,7 @@
 import { Expandable } from "components/expandable";
+import { Player } from "components/player";
 import React, { useState } from "react";
+import { AiOutlineSound, AiFillSound } from "react-icons/ai";
 
 const COLORS = ["#ffffff", "#a1d182", "#6dba2d", "#11af00"];
 
@@ -8,10 +10,19 @@ const DAY_TICKET_PASSWORD = "bettergatethannever";
 const ALT_DAY_TICKET_PASSWORD = "bettergatethennever";
 const ALT_ALT_TICKET_PASSWORD = "salamiirisangelhuman";
 
-type Artist = { name: string; bio?: string; isGate?: boolean };
+type Artist = {
+  name: string;
+  bio?: string;
+  isGate?: boolean;
+  trackLink?: string;
+  trackTitle?: string;
+};
 
 const ARTISTS_LIVE: Artist[] = [
-  { name: "Bubble People", isGate: true },
+  {
+    name: "Bubble People",
+    isGate: true,
+  },
   { name: "Craft Ebbing", isGate: true },
   { name: "Ella Ex Machina", isGate: true },
   {
@@ -39,7 +50,13 @@ const ARTISTS_LIVE: Artist[] = [
     name: "Nosewise",
     bio: "This live set from Nosewise is a new project from the co-founder of label Twin System & the producer/DJ also known as Flytipper. Reconciling what have until now been disparate parts of their practice, it’ll feature guitar and vocal performance informed by jazz & new-wave, over a bed of hypnotic, richly textured production.",
   },
-  { name: "Scary Hari", bio: "(v scary)", isGate: true },
+  {
+    name: "Scary Hari",
+    bio: "(v scary)",
+    isGate: true,
+    trackTitle: "Untitled",
+    trackLink: "https://soundcloud.com/hari-chauhan/ruminations",
+  },
   { name: "Sokora Mortal" },
   {
     name: "Torn Relics",
@@ -98,6 +115,8 @@ const App: React.FC = () => {
   const [passwordValue, setPasswordValue] = useState("");
 
   const [openArtistName, setOpenArtistName] = useState<string | null>(null);
+  const [openArtistTrack, setOpenArtistTrack] = useState<string | null>(null);
+  const [openArtistLink, setOpenArtistLink] = useState<string | null>(null);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setPasswordValue(e.target.value);
@@ -325,6 +344,15 @@ const App: React.FC = () => {
           }}
         >
           <div className="right-child" style={{ height: "100%" }}>
+            <div className="player-container">
+              <Player
+                link={openArtistLink ?? undefined}
+                artist={
+                  openArtistLink && openArtistName ? openArtistName : undefined
+                }
+                title={openArtistTrack ?? undefined}
+              />
+            </div>
             <h1
               style={{
                 textAlign: "center",
@@ -347,11 +375,19 @@ const App: React.FC = () => {
                   isOpen={openArtistName === artist.name}
                   trigger={
                     <p style={{ color: COLORS[(index % 3) + 1] }}>
-                      {artist.bio
-                        ? artist.name === openArtistName
-                          ? "- "
-                          : "+ "
-                        : ""}
+                      {artist.bio ? (
+                        artist.name === openArtistName ? (
+                          <span style={{ width: 16, display: "inline-block" }}>
+                            -
+                          </span>
+                        ) : (
+                          <span style={{ width: 16, display: "inline-block" }}>
+                            +
+                          </span>
+                        )
+                      ) : (
+                        ""
+                      )}
                       {artist.name}
                       {artist.isGate ? (
                         <img
@@ -364,11 +400,40 @@ const App: React.FC = () => {
                           }}
                         />
                       ) : null}
+                      {artist.trackLink ? (
+                        openArtistLink === artist.trackLink ? (
+                          <AiFillSound
+                            style={{
+                              width: 28,
+                              marginLeft: 4,
+                              transform: "rotate(-15deg)",
+                              filter: "brightness(0.8)",
+                            }}
+                          />
+                        ) : (
+                          <AiOutlineSound
+                            style={{
+                              width: 28,
+                              marginLeft: 4,
+                              transform: "rotate(-15deg)",
+                              filter: "brightness(0.8)",
+                            }}
+                          />
+                        )
+                      ) : null}
                     </p>
                   }
                   description={artist.bio ?? ""}
-                  set={() => setOpenArtistName(artist.name)}
-                  unset={() => setOpenArtistName(null)}
+                  set={() => {
+                    setOpenArtistName(artist.name);
+                    setOpenArtistLink(artist.trackLink ?? null);
+                    setOpenArtistTrack(artist.trackTitle ?? null);
+                  }}
+                  unset={() => {
+                    setOpenArtistName(null);
+                    setOpenArtistLink(null);
+                    setOpenArtistTrack(null);
+                  }}
                 >
                   <p style={{ fontSize: 8, color: "white" }}>{artist.bio}</p>
                 </Expandable>
@@ -400,11 +465,23 @@ const App: React.FC = () => {
                           />
                         ) : null}
                         {artist.name}
-                        {artist.bio
-                          ? artist.name === openArtistName
-                            ? " -"
-                            : " +"
-                          : ""}
+                        {artist.bio ? (
+                          artist.name === openArtistName ? (
+                            <span
+                              style={{ width: 16, display: "inline-block" }}
+                            >
+                              -
+                            </span>
+                          ) : (
+                            <span
+                              style={{ width: 16, display: "inline-block" }}
+                            >
+                              +
+                            </span>
+                          )
+                        ) : (
+                          ""
+                        )}
                       </p>
                     </>
                   }
@@ -426,11 +503,19 @@ const App: React.FC = () => {
                   isOpen={openArtistName === artist.name}
                   trigger={
                     <p style={{ color: COLORS[(index % 3) + 1] }}>
-                      {artist.bio
-                        ? artist.name === openArtistName
-                          ? "- "
-                          : "+ "
-                        : ""}
+                      {artist.bio ? (
+                        artist.name === openArtistName ? (
+                          <span style={{ width: 16, display: "inline-block" }}>
+                            -
+                          </span>
+                        ) : (
+                          <span style={{ width: 16, display: "inline-block" }}>
+                            +
+                          </span>
+                        )
+                      ) : (
+                        ""
+                      )}
                       {artist.name}
                       {artist.isGate ? (
                         <img
