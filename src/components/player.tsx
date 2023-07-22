@@ -93,7 +93,7 @@ export const Player: React.FC<PlayerProps> = ({
           className="autoplay"
           onClick={() => setAutoplayOn((prev) => !prev)}
         >
-          {autoplayOn ? "Autoplay On" : "Autoplay Off"}
+          {autoplayOn ? "Autoplay Is On" : "Autoplay Is Off"}
         </button>
       </div>
     </>
