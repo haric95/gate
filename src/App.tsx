@@ -155,6 +155,7 @@ const ARTISTS_DJ: Artist[] = [
   {
     name: "proto//spacer",
     isGate: true,
+    bio: "Dubstep and menthol filters? Promise I'm not 16 😝",
     trackTitle: "GATE | Threads",
     trackLink:
       "https://soundcloud.com/mirlomirlo/gate-w-protospacer-hackney-wick-13-jun-threads",
