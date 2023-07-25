@@ -257,7 +257,7 @@ const App: React.FC = () => {
               >
                 £75
               </b>
-              {isDayTicket && <b> £50</b>}
+              {isDayTicket && <b> £55</b>}
             </p>
             <p style={{ color: COLORS[2], marginBottom: 24 }}>
               <b>120 bodies</b>
@@ -360,7 +360,7 @@ const App: React.FC = () => {
                 onClick={() =>
                   window.open(
                     `https://www.paypal.com/paypalme/gatecollective/${
-                      isDayTicket ? "50" : "75"
+                      isDayTicket ? "55" : "75"
                     }`,
                     "_blank"
                   )
