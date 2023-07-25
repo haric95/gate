@@ -532,7 +532,15 @@ const App: React.FC = () => {
                       setOpenArtistTrack(null);
                     }}
                   >
-                    <p style={{ fontSize: 8, color: "white" }}>{artist.bio}</p>
+                    <p
+                      style={{
+                        fontSize: 8,
+                        color: "white",
+                        whiteSpace: "break-spaces",
+                      }}
+                    >
+                      {artist.bio}
+                    </p>
                   </Expandable>
                 ) : (
                   <p
@@ -682,7 +690,15 @@ const App: React.FC = () => {
                       setOpenArtistTrack(null);
                     }}
                   >
-                    <p style={{ fontSize: 8, color: "white" }}>{artist.bio}</p>
+                    <p
+                      style={{
+                        fontSize: 8,
+                        color: "white",
+                        whiteSpace: "break-spaces",
+                      }}
+                    >
+                      {artist.bio}
+                    </p>
                   </Expandable>
                 ) : (
                   <>
@@ -795,7 +811,15 @@ const App: React.FC = () => {
                   set={() => setOpenArtistName(artist.name)}
                   unset={() => setOpenArtistName(null)}
                 >
-                  <p style={{ fontSize: 8, color: "white" }}>{artist.bio}</p>
+                  <p
+                    style={{
+                      fontSize: 8,
+                      color: "white",
+                      whiteSpace: "break-spaces",
+                    }}
+                  >
+                    {artist.bio}
+                  </p>
                 </Expandable>
               ))}
             </div>
