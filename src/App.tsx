@@ -48,7 +48,14 @@ const ARTISTS_LIVE: Artist[] = [
     trackTitle: "Climax",
     trackLink: "https://soundcloud.com/ex_sses/climax-1",
   },
-  { name: "Isn'tses" },
+  {
+    name: "Isn'tses",
+    bio: `Isn'tses is a collaboration between visual/electronic artist and musician Lisa McKendrick and animator and electronic artist Tim Drage. The duo perform wearing costumes and masks in conjunction with live video synth projections and illuminated props. They deliver a spontaneous and improvised performance using theatrical style interaction using beats, live sequencing and samples, field recordings, self-built synths, noise boxes, and vocals. Their music conjures themes such as paganism, freedom of speech, freedom of sound, intergalactic heroism and a playful interpretation of popular culture.
+
+  In addition to their personal DIY instruments they have designed and manufactured two psychogeographic synthesiser circuits: the Fort Processor, a touch and light controlled instrument and effects unit, and the Chernobylizer, a touch and power-starve controlled noise synth which won Award of Merit at Maker Music Festival 2021. `,
+    trackTitle: "CHERNOBYLIZER",
+    trackLink: "https://soundcloud.com/cementimental/isntses-chernobylizer",
+  },
   {
     name: "Kim Cosmik",
     bio: "Kim Cosmik started as a DJ with Sprial Tribe and Bedlam, playing at festivals and clubs all over the U.K and Europe as well as the legendary Knowledge Club in SW1. She has released music through her label Cybersoul on Bandcamp, as well as with a variety of labels such as 2020 Vision Recordings, Science Cult, Diffuse Reality, Touched Music, Section 27, Bass Agenda, Urban Connections, Zwaartekracht and many more. She formed her own label, Void Records in partnership with Hotmix / Bunker records in Holland and then Void was later signed to Matador EMI. Other aliases include Siren, a drum and bass project with Blaze on Spectrum Audio / Alphamagic, collaborating with Dj Damage. Kim Cosmik has played with many amazing artists such as Lory D, Leo Anibaldi, Colin Dale, Serge Clone, Aleksi Perala, Andy Turner, B12, Radioactiveman and many more. Kim Cosmik is currently a resident at www.threadsradio.com, www.techno-club.net and her own event Hybrid which she launched in 2019. ",
