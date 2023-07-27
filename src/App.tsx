@@ -979,7 +979,7 @@ const App: React.FC = () => {
                   slice of watermelon
                 </p>
               </div>
-              <p style={{ fontSize: 8, marginBottom: 64 }}>
+              <p style={{ fontSize: 12, marginBottom: 64 }}>
                 All meals are vegan. Please let us know in advance if you have
                 any special dietary requirements.
               </p>
