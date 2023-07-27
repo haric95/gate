@@ -265,12 +265,29 @@ const App: React.FC = () => {
         }}
       >
         <div className="left">
-          <div style={{ zIndex: 1, marginBottom: 24 }}>
-            <h2 style={{ color: COLORS[0] }}>Grab</h2>
-            <h2 style={{ color: COLORS[1] }}>A</h2>
-            <h2 style={{ color: COLORS[2] }}>Tent</h2>
-            <h2 style={{ color: COLORS[3] }}>Everybody</h2>
+          <div style={{ zIndex: 1, marginBottom: 24, display: "flex" }}>
+            <div>
+              <h2 style={{ color: COLORS[0] }}>Grab</h2>
+              <h2 style={{ color: COLORS[1] }}>A</h2>
+              <h2 style={{ color: COLORS[2] }}>Tent</h2>
+              <h2 style={{ color: COLORS[3] }}>Everybody</h2>
+            </div>
+            <a
+              style={{
+                fontSize: 12,
+                textDecoration: "underline",
+                textAlign: "right",
+                color: "white",
+                height: "fit-content",
+              }}
+              href="https://docs.google.com/document/d/1R7_KeNRqJsxA1esMBZbpW0BchWAEcZJ00roADe5t6cY/edit"
+              target="_blank"
+              rel="noreferrer"
+            >
+              GATE access document and plaintext website
+            </a>
           </div>
+
           <div className="ticket-window left">
             <p style={{ color: COLORS[0] }}>Aug 4th - Aug 6th</p>
             <p style={{ color: COLORS[1] }}>
@@ -431,7 +448,7 @@ const App: React.FC = () => {
                   for the password
                 </p>
                 <p></p>
-                <div>
+                <div style={{ marginBottom: 32 }}>
                   <p style={{ fontSize: 12 }}>Password</p>
                   <input
                     type="password"
