@@ -22,6 +22,7 @@ const ARTISTS_LIVE: Artist[] = [
   {
     name: "Bubble People",
     isGate: true,
+    bio: "Our resident organ grinder will debut a batch of new material for our dose of live IDM. Extreme melodics in effect.",
     trackTitle: "Steal A Look",
     trackLink: "https://soundcloud.com/bubblepeopleofficial/steal-a-look",
   },
