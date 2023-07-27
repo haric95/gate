@@ -27,11 +27,13 @@ const ARTISTS_LIVE: Artist[] = [
   },
   {
     name: "Craft Ebbing",
+    bio: "sheet music put through a paper shredder",
     isGate: true,
   },
   {
     name: "Ella Ex Machina",
     isGate: true,
+    bio: "Coded live electronic hardcore for the masses. Daytime antics I hear you say?",
     trackTitle: "Big Polyrhythm",
     trackLink: "https://soundcloud.com/ellaexmachina/big-polyrhythm",
   },
@@ -89,7 +91,10 @@ const ARTISTS_LIVE: Artist[] = [
     trackTitle: "Untitled",
     trackLink: "https://soundcloud.com/hari-chauhan/ruminations",
   },
-  { name: "Sokora Mortal" },
+  {
+    name: "Sokora Mortal",
+    bio: "Sokora is a multi instrumentalist living in London. She experiments with noise, lounge and spoken word.",
+  },
   {
     name: "Torn Relics",
     bio: "The London based experimental duo, Torn Relics comprises of Romek Boyer (AKA Rommek) & Aimée Mullen. The body of their work is a mixture of cyber- punk electronics with tribalistic violin, rhythms and tones. Genre bending and tension riding, is all part of the duo’s enigmatic and high energy live performances. They duo have graced the stage across UK and Europe, including Berlin, Bulgaria, Latvia, Greece to name a few. The Poisoned Chalice was the first release form Torn Relics, which came out on Sacred Court in 2019 and included a remix from SNTS. Abolish The Dogma, was the duos debut 8-track album, released in 2020 on Leyla records and their latest LP 'Burning Injustice' Was release on the Berlin based label Instrument Of Discipline. Torn Relics are the Founders of Arcane, the London based event series, focusing on boundary live pushing performances. Together they curate and select artists with a propensity to spear through the noise of conventional production and performance norms. Guest artists include Samuel Kerridge, Iron Sight, Slow White Fall (aka broken English Club), Eraldo Bernocchi, Fresnel Lens to name a few.",
@@ -131,6 +136,7 @@ const ARTISTS_DJ: Artist[] = [
   {
     name: "Internal Object",
     isGate: true,
+    bio: "Noise and heavy set provided by our resident DJ and chief whip. Late night drone and hard techno meditation. ",
     trackTitle: "Loose Lips Launch",
     trackLink:
       "https://soundcloud.com/loose-lips123/internal-object-ll-ep-launch-event-the-glove-that-fits",
@@ -170,6 +176,7 @@ const ARTISTS_DJ: Artist[] = [
   {
     name: "Seshtan",
     isGate: true,
+    bio: "Bred in the Amazon, lost and then found in a crate of old techno vinyl, Seshtan uses tribal textures and blends of drumming to induce ritualistic rhythms in unknown territories.",
     trackTitle: "GATE | Threads",
     trackLink:
       "https://soundcloud.com/seshtan/threads-radio-gate-w-seshtan-21-feb-23",
@@ -182,7 +189,11 @@ const ARTISTS_DJ: Artist[] = [
     trackLink:
       "https://soundcloud.com/s_inny/sodaa-stream-001-netil-radio-sinny-january-22",
   },
-  { name: "SKIDOOJACKET", isGate: true },
+  {
+    name: "SKIDOOJACKET",
+    isGate: true,
+    bio: "skidoos skidoos trikes n bikes at da gazeebow we likes to fights dis is what we do up in airport heights yis ohhh buddy you are in for a treat",
+  },
   {
     name: "Waxwing + Rex Domino",
     bio: "Diversion is a South London club night known for its intimate chaos. Created by Waxwing, the event provides a supportive and pressure-free environment for both established and up-and-coming DJs to experiment and play. Resident host/MC, Horse Militia's Rex Domino, punctuates the night. Sprawling dubbed vocals, seasoned with delay, aim to collaborate with the DJs' selections rather than overshadow them. A custom-built dub siren is always on hand to further elevate the mood. As a selector, Waxwing draws from the realms of Dub and Dance-floor with equal enthusiasm, crafting a thoughtful sonic landscape that you can still shake several legs at.",
@@ -197,6 +208,12 @@ const ARTISTS_PERFORMERS: Artist[] = [
     bio: "Olive's chosen material is petroleum jelly, otherwise known as vaseline. She will smother, reveal and conceal using different tools. The tools will also come in useful with her drag persona Dru Lux, painter and decorator extravaganza.",
   },
   { name: "Phoebe Lo", bio: "" },
+];
+
+const ARTISTS_INSTALLATIONS_AND_WORKSHOPS: Artist[] = [
+  { name: "Buket Yenidogan" },
+  { name: "Baos.graph" },
+  { name: "Anthony Walsh" },
 ];
 
 const App: React.FC = () => {
@@ -454,10 +471,7 @@ const App: React.FC = () => {
             >
               Lineup
             </h1>
-            <div
-              style={{ textAlign: "left", marginBottom: 16 }}
-              className="live"
-            >
+            <div style={{ textAlign: "left" }} className="live">
               <h4 style={{ color: COLORS[0], fontSize: 24, marginBottom: 8 }}>
                 Live
               </h4>
@@ -610,10 +624,7 @@ const App: React.FC = () => {
                 )
               )}
             </div>
-            <div
-              style={{ textAlign: "right", marginBottom: 16 }}
-              className="djs"
-            >
+            <div style={{ textAlign: "right" }} className="djs">
               <h4 style={{ color: COLORS[0], fontSize: 24, marginBottom: 8 }}>
                 DJ
               </h4>
@@ -775,6 +786,62 @@ const App: React.FC = () => {
                 Performance
               </h4>
               {ARTISTS_PERFORMERS.map((artist, index) => (
+                <Expandable
+                  key={artist.name}
+                  isOpen={openArtistName === artist.name}
+                  trigger={
+                    <p style={{ color: COLORS[(index % 3) + 1] }}>
+                      {artist.bio ? (
+                        artist.name === openArtistName ? (
+                          <span style={{ width: 16, display: "inline-block" }}>
+                            -
+                          </span>
+                        ) : (
+                          <span style={{ width: 16, display: "inline-block" }}>
+                            +
+                          </span>
+                        )
+                      ) : (
+                        ""
+                      )}
+                      {artist.name}
+                      {artist.isGate ? (
+                        <img
+                          src="/images/gate-logo.svg"
+                          style={{
+                            width: 28,
+                            marginLeft: 4,
+                            transform: "rotate(-15deg)",
+                            filter: "brightness(6)",
+                          }}
+                        />
+                      ) : null}
+                    </p>
+                  }
+                  description={artist.bio ?? ""}
+                  set={() => setOpenArtistName(artist.name)}
+                  unset={() => setOpenArtistName(null)}
+                >
+                  <p
+                    style={{
+                      fontSize: 8,
+                      color: "white",
+                      whiteSpace: "break-spaces",
+                    }}
+                  >
+                    {artist.bio}
+                  </p>
+                </Expandable>
+              ))}
+            </div>
+            <div
+              style={{ textAlign: "right" }}
+              className="installations-and-workshops"
+            >
+              <h4 style={{ color: COLORS[0], fontSize: 24, marginBottom: 8 }}>
+                Installations & Workshops
+              </h4>
+              {ARTISTS_INSTALLATIONS_AND_WORKSHOPS.map((artist, index) => (
                 <Expandable
                   key={artist.name}
                   isOpen={openArtistName === artist.name}

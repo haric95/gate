@@ -542,6 +542,7 @@ $breakpoints: (
 
   @include bp('tablet') {
     width: 100%;
+    margin-bottom: 64px;
   }
 }
 
@@ -549,10 +550,11 @@ $breakpoints: (
   align-self: flex-end;
   transform: translate(0, -100px);
   width: 75%;
-
+  
   @include bp('tablet') {
     transform: none;
     width: 100%;
+    margin-bottom: 64px;
   }
 }
 
@@ -563,9 +565,21 @@ $breakpoints: (
   @include bp('tablet') {
     transform: none;
     width: 100%; 
+    margin-bottom: 64px;
   }
 }
 
+.installations-and-workshops  {
+  align-self: flex-end;
+  transform: translate(0, -150px);
+  width: 75%;
+  
+  @include bp('tablet') {
+    transform: none;
+    width: 100%;
+  }
+}
+  
 .mobile-divider {
   display: none;
   margin-top: 32px;
