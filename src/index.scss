@@ -538,7 +538,7 @@ $breakpoints: (
 }
 
 .live {
-  width: 75%;
+  width: 60%;
 
   @include bp('tablet') {
     width: 100%;
@@ -549,7 +549,7 @@ $breakpoints: (
 .djs {
   align-self: flex-end;
   transform: translate(0, -100px);
-  width: 75%;
+  width: 60%;
   
   @include bp('tablet') {
     transform: none;
@@ -560,7 +560,7 @@ $breakpoints: (
 
 .performers {
   transform: translate(0, -200px);
-  width: 75%; 
+  width: 60%; 
   
   @include bp('tablet') {
     transform: none;
@@ -572,7 +572,7 @@ $breakpoints: (
 .installations-and-workshops  {
   align-self: flex-end;
   transform: translate(0, -150px);
-  width: 75%;
+  width: 60%;
   
   @include bp('tablet') {
     transform: none;

@@ -265,7 +265,14 @@ const App: React.FC = () => {
         }}
       >
         <div className="left">
-          <div style={{ zIndex: 1, marginBottom: 24, display: "flex" }}>
+          <div
+            style={{
+              zIndex: 1,
+              marginBottom: 24,
+              display: "flex",
+              justifyContent: "space-between",
+            }}
+          >
             <div>
               <h2 style={{ color: COLORS[0] }}>Grab</h2>
               <h2 style={{ color: COLORS[1] }}>A</h2>
