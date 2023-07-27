@@ -214,6 +214,7 @@ const ARTISTS_INSTALLATIONS_AND_WORKSHOPS: Artist[] = [
   { name: "Buket Yenidogan" },
   { name: "Baos.graph" },
   { name: "Anthony Walsh" },
+  { name: "Matthew Beck" },
 ];
 
 const App: React.FC = () => {
