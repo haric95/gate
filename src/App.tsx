@@ -67,13 +67,6 @@ const ARTISTS_LIVE: Artist[] = [
       "https://soundcloud.com/kimcosmik/kim-cosmik-threads-takeover-2023",
   },
   {
-    name: "Koruth",
-    bio: "Koruth is the musical project of painter Anna Ruth. A ballad without words. Intuitive soundscape created on the spot. Endless loops of voice and flutes distorted by multiplication. Transparent sound sources dissolved into a chaotic ambient trance.",
-    trackTitle: "Unique Task (w/ Kult Masek)",
-    trackLink:
-      "https://soundcloud.com/anna-ruth-474715407/kult-koruth-unique-task",
-  },
-  {
     name: "Marysia Osu + YUIS",
     bio: 'Marysia Osu is a Polish harpist and producer based in London. Using electronics she expands the natural sound of her instrument. Her music is the result of combining "harp, beats & dreams." She will be joined by YUIS on the flute.',
     trackTitle: "Melting Timbers (ft. Plumm)",
