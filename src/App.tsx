@@ -217,6 +217,8 @@ const App: React.FC = () => {
   const [isDayTicket, setIsDayTicket] = useState(false);
   const [isM, setIsM] = useState(true);
   const [passwordValue, setPasswordValue] = useState("");
+  const [isSecret, setIsSecret] = useState(false);
+  const [hariCount, setHariCount] = useState(0);
 
   const [openArtistName, setOpenArtistName] = useState<string | null>(null);
   const [openArtistTrack, setOpenArtistTrack] = useState<string | null>(null);
@@ -248,6 +250,16 @@ const App: React.FC = () => {
       Math.floor(Math.random() * 24) + 1,
     ];
   });
+
+  const handleHariClick = () => {
+    if (hariCount == 4) {
+      setIsSecret(true);
+      setIsM(true);
+      setHasEnteredPassword(true);
+      setIsDayTicket(true);
+    }
+    setHariCount((old) => old + 1);
+  };
 
   return (
     <>
@@ -432,7 +444,7 @@ const App: React.FC = () => {
                   />
                 )}
               </button>
-            ) : (
+            ) : isSecret ? (
               <div style={{ color: COLORS[0], marginTop: 24 }}>
                 <p style={{ marginBottom: 8, color: COLORS[3] }}>
                   Enter password to continue with purchase.
@@ -461,6 +473,16 @@ const App: React.FC = () => {
                   <button>Submit</button>
                 </div>
               </div>
+            ) : (
+              <p
+                style={{
+                  color: COLORS[3],
+                  fontSize: 24,
+                  textDecoration: "underline",
+                }}
+              >
+                SOLD OUT{" "}
+              </p>
             )}
           </div>
         </div>
@@ -499,6 +521,9 @@ const App: React.FC = () => {
                   <Expandable
                     key={artist.name}
                     isOpen={openArtistName === artist.name}
+                    extraOnClick={() => {
+                      artist.name.includes("Hari") ? handleHariClick() : null;
+                    }}
                     trigger={
                       <p style={{ color: COLORS[(index % 3) + 1] }}>
                         {artist.bio ? (

@@ -7,6 +7,7 @@ type ExpandableProps = {
   description?: string;
   set: () => void;
   unset: () => void;
+  extraOnClick?: () => void;
 };
 
 export const Expandable: React.FC<ExpandableProps> = ({
@@ -15,6 +16,7 @@ export const Expandable: React.FC<ExpandableProps> = ({
   description,
   set,
   unset,
+  extraOnClick,
 }) => {
   const isActive = !!description;
   return (
@@ -22,6 +24,7 @@ export const Expandable: React.FC<ExpandableProps> = ({
       className={`collapsible ${isActive ? "active" : "inactive"}`}
       trigger={trigger}
       handleTriggerClick={() => {
+        extraOnClick && extraOnClick();
         if (isActive) {
           if (isOpen) {
             unset();
