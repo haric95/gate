@@ -18,260 +18,83 @@ type Artist = {
   trackTitle?: string;
 };
 
-const ARTISTS_LIVE: Artist[] = [
-  {
-    name: "Bubble People",
-    isGate: true,
-    bio: "Our resident organ grinder will debut a batch of new material for our dose of live IDM. Extreme melodics in effect.",
-    trackTitle: "Steal A Look",
-    trackLink: "https://soundcloud.com/bubblepeopleofficial/steal-a-look",
-  },
-  {
-    name: "Craft Ebbing",
-    bio: "sheet music put through a paper shredder",
-    isGate: true,
-  },
-  {
-    name: "Ella Ex Machina",
-    isGate: true,
-    bio: "Coded live electronic hardcore for the masses. Daytime antics I hear you say?",
-    trackTitle: "Big Polyrhythm",
-    trackLink: "https://soundcloud.com/ellaexmachina/big-polyrhythm",
-  },
-  {
-    name: "Fiesta Soundsystem",
-    bio: "Fiesta soundsystem presents a new live performance project built from a mountain of homemade sequencing and sampling software, freeing traditional jungle and techno sounds from their familiar strict linear frameworks into chaotic nonlinearity and rhythmic recursion.",
-    trackTitle: "FSSYS Productions Spring 2023",
-    trackLink:
-      "https://soundcloud.com/fiestasoundsystem/fssys-productions-spring-2023",
-  },
-  {
-    name: "ex.sses",
-    bio: "ex.sses (she/they) is an experimental sound artist, electronic producer and DJ. She initially came on the scene in 2018 as the founder of Earwax, an ongoing project based platform for sound artists of marginalised genders. ex.sses’ ties to experimental sound and club culture have since manifested in EP releases Relic (Cherche Encore, 2021), Buried (Hard Return, 2021) and most recently Scanner (TT, 2022) which premiered on DJ Mag. As well as singles for compilations including Pollination and Earful of WAV’s out this year. These releases, in addition to their online presence, have gained attention over the past year, resulting in dark, club-focused DJ sets for HÖR, Keep Hush, Circadian Rhythms and electronic live performances for Comic Sans label tour, Hidden Door Festival and Iklectik that expand on ex.sses’ exploration of sonic intimacy, hauntology and the gendered body.",
-    trackTitle: "Climax",
-    trackLink: "https://soundcloud.com/ex_sses/climax-1",
-  },
-  {
-    name: "Isn'tses",
-    bio: `Isn'tses is a collaboration between visual/electronic artist and musician Lisa McKendrick and animator and electronic artist Tim Drage. The duo perform wearing costumes and masks in conjunction with live video synth projections and illuminated props. They deliver a spontaneous and improvised performance using theatrical style interaction using beats, live sequencing and samples, field recordings, self-built synths, noise boxes, and vocals. Their music conjures themes such as paganism, freedom of speech, freedom of sound, intergalactic heroism and a playful interpretation of popular culture.
-
-  In addition to their personal DIY instruments they have designed and manufactured two psychogeographic synthesiser circuits: the Fort Processor, a touch and light controlled instrument and effects unit, and the Chernobylizer, a touch and power-starve controlled noise synth which won Award of Merit at Maker Music Festival 2021. `,
-    trackTitle: "CHERNOBYLIZER",
-    trackLink: "https://soundcloud.com/cementimental/isntses-chernobylizer",
-  },
-  {
-    name: "Kim Cosmik",
-    bio: "Kim Cosmik started as a DJ with Sprial Tribe and Bedlam, playing at festivals and clubs all over the U.K and Europe as well as the legendary Knowledge Club in SW1. She has released music through her label Cybersoul on Bandcamp, as well as with a variety of labels such as 2020 Vision Recordings, Science Cult, Diffuse Reality, Touched Music, Section 27, Bass Agenda, Urban Connections, Zwaartekracht and many more. She formed her own label, Void Records in partnership with Hotmix / Bunker records in Holland and then Void was later signed to Matador EMI. Other aliases include Siren, a drum and bass project with Blaze on Spectrum Audio / Alphamagic, collaborating with Dj Damage. Kim Cosmik has played with many amazing artists such as Lory D, Leo Anibaldi, Colin Dale, Serge Clone, Aleksi Perala, Andy Turner, B12, Radioactiveman and many more. Kim Cosmik is currently a resident at www.threadsradio.com, www.techno-club.net and her own event Hybrid which she launched in 2019. ",
-    trackTitle: "Threads Takeover",
-    trackLink:
-      "https://soundcloud.com/kimcosmik/kim-cosmik-threads-takeover-2023",
-  },
-  {
-    name: "Marysia Osu + YUIS",
-    bio: 'Marysia Osu is a Polish harpist and producer based in London. Using electronics she expands the natural sound of her instrument. Her music is the result of combining "harp, beats & dreams." She will be joined by YUIS on the flute.',
-    trackTitle: "Melting Timbers (ft. Plumm)",
-    trackLink: "https://soundcloud.com/marysiaharp/melting-timbers-ft-plumm",
-  },
-  {
-    name: "Nosewise",
-    bio: "This live set from Nosewise is a new project from the co-founder of label Twin System & the producer/DJ also known as Flytipper. Reconciling what have until now been disparate parts of their practice, it’ll feature guitar and vocal performance informed by jazz & new-wave, over a bed of hypnotic, richly textured production.",
-    trackTitle: "Live at Niche",
-    trackLink: "https://soundcloud.com/ikavapii/niche-15-06-23-nosewise-live",
-  },
-  {
-    name: "Scary Hari",
-    bio: "(v scary)",
-    isGate: true,
-    trackTitle: "Untitled",
-    trackLink: "https://soundcloud.com/hari-chauhan/ruminations",
-  },
-  {
-    name: "Sokora Mortal",
-    bio: "Sokora is a multi instrumentalist living in London. She experiments with noise, lounge and spoken word.",
-  },
-  {
-    name: "Torn Relics",
-    bio: "The London based experimental duo, Torn Relics comprises of Romek Boyer (AKA Rommek) & Aimée Mullen. The body of their work is a mixture of cyber- punk electronics with tribalistic violin, rhythms and tones. Genre bending and tension riding, is all part of the duo’s enigmatic and high energy live performances. They duo have graced the stage across UK and Europe, including Berlin, Bulgaria, Latvia, Greece to name a few. The Poisoned Chalice was the first release form Torn Relics, which came out on Sacred Court in 2019 and included a remix from SNTS. Abolish The Dogma, was the duos debut 8-track album, released in 2020 on Leyla records and their latest LP 'Burning Injustice' Was release on the Berlin based label Instrument Of Discipline. Torn Relics are the Founders of Arcane, the London based event series, focusing on boundary live pushing performances. Together they curate and select artists with a propensity to spear through the noise of conventional production and performance norms. Guest artists include Samuel Kerridge, Iron Sight, Slow White Fall (aka broken English Club), Eraldo Bernocchi, Fresnel Lens to name a few.",
-    trackTitle: "Burning Injustice",
-    trackLink: "https://soundcloud.com/tornrelics/burning-injustice",
-  },
-];
-
-const ARTISTS_DJ: Artist[] = [
-  {
-    name: "Ab Ru",
-    bio: `Is Andrea Abbruzzese 
-  
-  VideoGames Audio Programmer and Sound Artist
-  
-  Part of multiple performances projects across Italy and Uk bridging between sound research based  performances and experimental location based sound projects 
-   
-  ⚛️☣️ Vinyl music selector
-  💮🌀 Masher of rhythms 
-  🦑🦄 SoundJourney Marshall
-  🌿🍄 Shrooms advocate  
-  🏴‍☠️🥷 Wounded free Rave Soldier  🥷🏴‍☠️
-  Lover☢️
-  of☣️
-  ze👨‍🎨
-  ⚛️Sub ⚛️
-  🏴‍☠️
-  Founding member of the art collectives
-   @M.O.B (Uk)
-   @Tracey (Italy)`,
-  },
-  { name: "DJ Sean Davies", isGate: true },
-  {
-    name: "Dome Zero",
-    bio: "Dome Zero makes music that emphasises off-guard abrasiveness and rhythmic inventiveness. This mixture of terror and lark has seen released across labels such as Accidental Meeting and Egregore Collective, as well as a debut EP for All Centre. In his spare time, he indulges himself by writing about music (yawn) and repeatedly watching YouTube clips of TV shows he’s already seen. His set for GATE will be a rare daylight excursion, what the rays of sunshine will bring out is yet to be seen…",
-    trackTitle: "Tinned Heat w/ Saltpeter",
-    trackLink: "https://soundcloud.com/dome-zero/tinned-heat-with-saltpeter",
-  },
-  {
-    name: "Internal Object",
-    isGate: true,
-    bio: "Noise and heavy set provided by our resident DJ and chief whip. Late night drone and hard techno meditation. ",
-    trackTitle: "Loose Lips Launch",
-    trackLink:
-      "https://soundcloud.com/loose-lips123/internal-object-ll-ep-launch-event-the-glove-that-fits",
-  },
-  {
-    name: "Lewi Boome",
-    bio: "Lewi Boome is a London based DJ and producer who co-runs the blossoming Twin System label whilst being a Kindred and Noods regular. Lewi’s sound reflects his deep appreciation and knowledge of the many sides that electronic music has to offer and sees him deftly dance the line between fun, dark and twisted in a way that results in beautifully controlled chaos. Expect dizzying rhythms and warped textures that travel through a range of off-kilter club tracks, drawing from all corners of the spectrum which will leave your mind melted.",
-    trackTitle: "EOS Radio",
-    trackLink:
-      "https://soundcloud.com/lewiboome/guest-mix-for-mars-leder-eos-radio",
-  },
-  {
-    name: "LNR",
-    bio: "LNR is a DJ and music journalist from the UK currently based in Amsterdam. She classes herself as a fan rather than an artist, spending hours digging for old school vinyl along the spectrum of wonky psychedelic controlled chaos. Fiercely passionate for the free party scene, she tries to create an otherworldly journey rooted in subcultural history that spans techno, trance, rave, and jungle.",
-    trackTitle: "BunkerBauer",
-    trackLink: "https://soundcloud.com/bunkerbauer/bunkerbauer-podcast-50-lnr",
-  },
-  {
-    name: "Oddman",
-    isGate: true,
-    bio: "this guy is so SICK man he like spray paints his head and wears goretex, sick",
-  },
-  {
-    name: "Frankie Bubblegum",
-    trackTitle: "Accidental Meetings Podcast",
-    trackLink:
-      "https://soundcloud.com/a_m_radio/am-podcast-76-frankie-bubblegum",
-  },
-  {
-    name: "proto//spacer",
-    isGate: true,
-    bio: "Dubstep and menthol filters? Promise I'm not 16 😝",
-    trackTitle: "GATE | Threads",
-    trackLink:
-      "https://soundcloud.com/mirlomirlo/gate-w-protospacer-hackney-wick-13-jun-threads",
-  },
-  {
-    name: "Seshtan",
-    isGate: true,
-    bio: "Bred in the Amazon, lost and then found in a crate of old techno vinyl, Seshtan uses tribal textures and blends of drumming to induce ritualistic rhythms in unknown territories.",
-    trackTitle: "GATE | Threads",
-    trackLink:
-      "https://soundcloud.com/seshtan/threads-radio-gate-w-seshtan-21-feb-23",
-  },
-  {
-    name: "sinny",
-    isGate: true,
-    bio: "sinny's purile need to impress those around him can be heard clearly in his try-hard sets that are more often than not, very mid. drawing from a narrow range of music that he has aquired through his youtube recommended videos or sponsored ads on instagram, sinny gives little thought to his selection an instead opts for a 'style over substance' approach by trying to create intrigue through an unappealing mask that he can be seen wearing during his sets. sinny relies heavily on gimmicks such as wheel ups and chopping unrhythimcally much to the annoyance of the audience, however, his sets provide a great opportunity to go for a ciggy break, catch up with friends or watch paint dry.",
-    trackTitle: "SODAA Stream",
-    trackLink:
-      "https://soundcloud.com/s_inny/sodaa-stream-001-netil-radio-sinny-january-22",
-  },
-  {
-    name: "SKIDOOJACKET",
-    isGate: true,
-    bio: "skidoos skidoos trikes n bikes at da gazeebow we likes to fights dis is what we do up in airport heights yis ohhh buddy you are in for a treat",
-  },
-  {
-    name: "Waxwing + Rex Domino",
-    bio: "Diversion is a South London club night known for its intimate chaos. Created by Waxwing, the event provides a supportive and pressure-free environment for both established and up-and-coming DJs to experiment and play. Resident host/MC, Horse Militia's Rex Domino, punctuates the night. Sprawling dubbed vocals, seasoned with delay, aim to collaborate with the DJs' selections rather than overshadow them. A custom-built dub siren is always on hand to further elevate the mood. As a selector, Waxwing draws from the realms of Dub and Dance-floor with equal enthusiasm, crafting a thoughtful sonic landscape that you can still shake several legs at.",
-  },
-];
-
-const ARTISTS_PERFORMERS: Artist[] = [
-  { name: "Madi Plunkett", bio: "" },
-  { name: "Neo Fung & Laboranta", bio: "", isGate: true },
-  {
-    name: "Olive Hardy",
-    bio: "Olive's chosen material is petroleum jelly, otherwise known as vaseline. She will smother, reveal and conceal using different tools. The tools will also come in useful with her drag persona Dru Lux, painter and decorator extravaganza.",
-  },
-  { name: "Phoebe Lo", bio: "" },
-];
-
-const ARTISTS_INSTALLATIONS_AND_WORKSHOPS: Artist[] = [
-  { name: "Buket Yenidogan" },
-  { name: "Baos.graph" },
-  { name: "Anthony Walsh" },
-  { name: "Matthew Beck" },
-];
-
 const App: React.FC = () => {
-  const [isSlim, setIsSlim] = useState(false);
-  const [hasEnteredPassword, setHasEnteredPassword] = useState(false);
-  const [isDayTicket, setIsDayTicket] = useState(false);
-  const [isM, setIsM] = useState(true);
-  const [passwordValue, setPasswordValue] = useState("");
-  const [isSecret, setIsSecret] = useState(false);
-  const [hariCount, setHariCount] = useState(0);
-
-  const [openArtistName, setOpenArtistName] = useState<string | null>(null);
-  const [openArtistTrack, setOpenArtistTrack] = useState<string | null>(null);
-  const [openArtistLink, setOpenArtistLink] = useState<string | null>(null);
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setPasswordValue(e.target.value);
-    if (e.target.value === PASSWORD) {
-      setHasEnteredPassword(true);
-      setIsM(false);
-    } else if (
-      e.target.value === DAY_TICKET_PASSWORD ||
-      e.target.value === ALT_DAY_TICKET_PASSWORD
-    ) {
-      setHasEnteredPassword(true);
-      setIsDayTicket(true);
-      setIsM(false);
-    } else if (e.target.value === ALT_ALT_TICKET_PASSWORD) {
-      setHasEnteredPassword(true);
-      setIsDayTicket(true);
-      setIsM(true);
-    }
-  };
-
-  const [[rand1, rand2, rand3], _] = useState(() => {
-    return [
-      Math.floor(Math.random() * 24) + 1,
-      Math.floor(Math.random() * 24) + 1,
-      Math.floor(Math.random() * 24) + 1,
-    ];
-  });
-
-  const handleHariClick = () => {
-    if (hariCount == 4) {
-      setIsSecret(true);
-      setIsM(true);
-      setHasEnteredPassword(true);
-      setIsDayTicket(true);
-    }
-    setHariCount((old) => old + 1);
-  };
-
   return (
     <>
       <div
         className="bg"
         style={{
-          backgroundColor: "black",
           zIndex: 0,
           padding: 24,
         }}
       >
-        <div className="left">
+        <div className="page">
+          <div className="front">
+            <div className="recipe-title">
+              <h2 style={{ color: COLORS[0] }}>
+                Black Lentil Daal with Basmati Rice and Pickle
+              </h2>
+            </div>
+            <div className="ingredients">
+              <h2 className="ingredients-title" style={{ color: COLORS[1] }}>
+                Ingredients
+              </h2>
+              <div className="ingredients-row">
+                <div className="container">
+                  <h3 className="ingredients-subtitle">Daal & Rice</h3>
+                  <ul className="ingredients-list">
+                    <li className="ingredients-list-item">
+                      <span className="quantity">300g</span> whole black urad
+                      daal
+                    </li>
+                    <li className="ingredients-list-item">
+                      <span className="quantity">4</span> cloves of garlic
+                    </li>
+                    <li className="ingredients-list-item">
+                      <span className="quantity">1 inch</span> of ginger
+                      (unpeeled)
+                    </li>
+                    <li className="ingredients-list-item">
+                      <span className="quantity">70g</span> tomato puree
+                    </li>
+                    <li className="ingredients-list-item">
+                      <span className="quantity">8g</span> sea salt
+                    </li>
+                    <li className="ingredients-list-item">
+                      <span className="quantity">1/3 tsp</span> chilli powder
+                    </li>
+                    <li className="ingredients-list-item">
+                      <span className="quantity">1/3 tsp</span> garam masala
+                    </li>
+                    <li className="ingredients-list-item">
+                      <span className="quantity">90 g</span> unsalted butter
+                    </li>
+                    <li className="ingredients-list-item">
+                      <span className="quantity">90 ml</span> double cream
+                    </li>
+                  </ul>
+                </div>
+                <div className="container">
+                  <h3 className="ingredients-subtitle">Pickle</h3>
+                  <ul className="ingredients-list">
+                    <li className="ingredients-list-item">
+                      <span className="quantity">300g</span> whole black urad
+                      daal
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          {new Array(3).fill(null).map((_, index) => (
+            <img
+              key={index}
+              src={`/images/${Math.ceil(Math.random() * 19)}.jpeg`}
+              className="bg-image"
+            />
+          ))}
+        </div>
+        {/* <div className="left">
           <div
             style={{
               zIndex: 1,
@@ -1037,7 +860,7 @@ const App: React.FC = () => {
               className={`img-3`}
             />
           </div>
-        </div>
+        </div> */}
       </div>
     </>
   );
