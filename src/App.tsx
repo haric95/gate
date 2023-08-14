@@ -32,58 +32,255 @@ const App: React.FC = () => {
           <div className="front">
             <div className="recipe-title">
               <h2 style={{ color: COLORS[0] }}>
-                Black Lentil Daal with Basmati Rice and Pickle
+                Jerk Cauliflower with Rice and Peas and Mango Sauce
               </h2>
+              <p style={{ color: COLORS[2] }}>
+                Smokey marinated cauliflower, barbecued and served on rice with
+                a sweet mango sauce
+              </p>
             </div>
+            <div className="recipe-description"></div>
+
             <div className="ingredients">
-              <h2 className="ingredients-title" style={{ color: COLORS[1] }}>
-                Ingredients
-              </h2>
+              <h2 className="ingredients-title">Ingredients</h2>
               <div className="ingredients-row">
                 <div className="container">
-                  <h3 className="ingredients-subtitle">Daal & Rice</h3>
+                  <h3 className="ingredients-subtitle">Jerk Cauliflower</h3>
                   <ul className="ingredients-list">
                     <li className="ingredients-list-item">
-                      <span className="quantity">300g</span> whole black urad
-                      daal
+                      <span className="quantity">2</span> cauliflowers
                     </li>
                     <li className="ingredients-list-item">
-                      <span className="quantity">4</span> cloves of garlic
+                      <span className="quantity">6</span> spring onions
                     </li>
                     <li className="ingredients-list-item">
-                      <span className="quantity">1 inch</span> of ginger
-                      (unpeeled)
+                      <span className="quantity">12 sprigs</span> of thyme
                     </li>
                     <li className="ingredients-list-item">
-                      <span className="quantity">70g</span> tomato puree
+                      <span className="quantity">2</span> scotch bonnet chillies
                     </li>
                     <li className="ingredients-list-item">
-                      <span className="quantity">8g</span> sea salt
+                      <span className="quantity">2 tbsp</span> brown sugar
                     </li>
                     <li className="ingredients-list-item">
-                      <span className="quantity">1/3 tsp</span> chilli powder
+                      <span className="quantity">1 1/2 tsp</span> salt
                     </li>
                     <li className="ingredients-list-item">
-                      <span className="quantity">1/3 tsp</span> garam masala
+                      <span className="quantity">1 tbsp</span> allspice powder
                     </li>
                     <li className="ingredients-list-item">
-                      <span className="quantity">90 g</span> unsalted butter
+                      <span className="quantity">1 tsp</span> cinnamon powder
                     </li>
                     <li className="ingredients-list-item">
-                      <span className="quantity">90 ml</span> double cream
+                      <span className="quantity">1</span> lime
+                    </li>
+                    <li className="ingredients-list-item">
+                      <span className="quantity">1</span> lemon
+                    </li>
+                    <li className="ingredients-list-item">
+                      <span className="quantity">2 inches</span> ginger
+                    </li>
+                    <li className="ingredients-list-item">
+                      <span className="quantity">8</span> cloves of garlic
+                    </li>
+                    <li className="ingredients-list-item">
+                      <span className="quantity">1 1/2 tbsp</span> olive oil
+                    </li>
+                    <li className="ingredients-list-item">
+                      <span className="quantity">1 tbsp</span> honey
+                    </li>
+                    <li className="ingredients-list-item">
+                      <span className="quantity">2 tbsp</span> rice vinegar
+                    </li>
+                    <li className="ingredients-list-item">
+                      <span className="quantity">2 tbsp</span> tamari or GF soy
+                      sauce
+                    </li>
+                    <li className="ingredients-list-item">
+                      <span className="quantity">60 ml</span> orange juice
+                    </li>
+                    <li className="ingredients-list-item">
+                      <span className="quantity">2</span> medium onions
                     </li>
                   </ul>
                 </div>
                 <div className="container">
-                  <h3 className="ingredients-subtitle">Pickle</h3>
+                  <h3 className="ingredients-subtitle">Rice and Peas</h3>
                   <ul className="ingredients-list">
                     <li className="ingredients-list-item">
-                      <span className="quantity">300g</span> whole black urad
-                      daal
+                      <span className="quantity">1</span> yellow onion
+                    </li>
+                    <li className="ingredients-list-item">
+                      <span className="quantity">2</span> cloves of garlic
+                    </li>
+                    <li className="ingredients-list-item">
+                      <span className="quantity">2 cups</span> long grain white
+                      rice
+                    </li>
+                    <li className="ingredients-list-item">
+                      <span className="quantity">180 ml</span> coconut milk
+                    </li>
+                    <li className="ingredients-list-item">
+                      <span className="quantity">180 ml</span> water
+                    </li>
+                    <li className="ingredients-list-item">
+                      <span className="quantity">1 1/2 tsp</span> salt
+                    </li>
+                    <li className="ingredients-list-item">
+                      <span className="quantity">1/2 tsp</span> ground allspice
+                    </li>
+                    <li className="ingredients-list-item">
+                      <span className="quantity">1/4 tsp</span> ground black
+                      pepper
+                    </li>
+                    <li className="ingredients-list-item">
+                      <span className="quantity">1 tin</span> red kidney beans
+                    </li>
+                    <li className="ingredients-list-item">
+                      <span className="quantity">2 sprigs</span> of thyme
+                    </li>
+                  </ul>
+                  <h3
+                    className="ingredients-subtitle"
+                    style={{ marginTop: 32 }}
+                  >
+                    Mango Sauce
+                  </h3>
+                  <ul className="ingredients-list">
+                    <li className="ingredients-list-item">
+                      <span className="quantity">2</span> ripe mangoes
+                    </li>
+                    <li className="ingredients-list-item">
+                      <span className="quantity">1 inch</span> piece of ginger
+                    </li>
+                    <li className="ingredients-list-item">
+                      <span className="quantity">30 ml</span> rice vinegar
+                    </li>
+                    <li className="ingredients-list-item">
+                      <span className="quantity">50g</span> brown sugar
+                    </li>
+                    <li className="ingredients-list-item">
+                      <span className="quantity">2</span> sprigs of thyme
                     </li>
                   </ul>
                 </div>
               </div>
+            </div>
+          </div>
+          {new Array(3).fill(null).map((_, index) => (
+            <img
+              key={index}
+              src={`/images/${Math.ceil(Math.random() * 19)}.jpeg`}
+              className="bg-image"
+            />
+          ))}
+        </div>
+
+        <div className="page instructions">
+          <div className="front">
+            <div className="recipe-instructions-title">
+              <h2 style={{ color: COLORS[0] }}>
+                Jerk Cauliflower with Rice and Peas and Mango Sauce
+              </h2>
+            </div>
+            <div className="recipe-description"></div>
+
+            <div className="instructions">
+              <h2 className="instructions-title">Instructions</h2>
+              <div className="">
+                <h3 className="instructions-subtitle">Jerk Cauliflower</h3>
+                <ol className="instructions-list">
+                  <li className="instructions-list-item c1">
+                    <p className="number">1.</p>
+                    <p>
+                      Add all ingredients apart from the cauliflower to a food
+                      processor and process until you have a chunky paste.
+                    </p>
+                  </li>
+                  <li className="instructions-list-item ml-1 c2">
+                    <p className="number">2.</p>
+                    <p>
+                      Break apart the cauliflowers into large florettes and coat
+                      in the marinade for{" "}
+                      <span className="highlight">2-12 hours</span>.
+                    </p>
+                  </li>
+                  <li className="instructions-list-item ml-2 c3">
+                    <p className="number">3.</p>
+                    <p>
+                      Grill or bake at <span className="highlight">200 °C</span>{" "}
+                      until the caulifower is tender with a smokey charred on
+                      the outside.
+                    </p>
+                  </li>
+                </ol>
+                <h3 className="instructions-subtitle">Rice and Peas</h3>
+                <ol className="instructions-list">
+                  <li className="instructions-list-item c1">
+                    <p className="number">1.</p>
+                    <p>
+                      Sauté diced yellow onion in olive oil on a medium heat
+                      until soft, around{" "}
+                      <span className="highlight">3 minutes</span>.
+                    </p>
+                  </li>
+                  <li className="instructions-list-item ml-1 c2">
+                    <p className="number">2.</p>
+                    <p>
+                      Add finely minced garlic and spring onion and continute to
+                      sauté for <span className="highlight">1 minute</span>
+                    </p>
+                  </li>
+                  <li className="instructions-list-item ml-2 c3">
+                    <p className="number">3.</p>
+                    <p>
+                      Take off the heat and add the rice, coconut milk, water,
+                      salt, allspice and black pepper. Stir to combine
+                    </p>
+                  </li>
+                  <li className="instructions-list-item ml-1 c2">
+                    <p className="number">4.</p>
+                    <p>
+                      Pour the tin of undrained kidney beans into the center of
+                      the rice and lay sprigs of thyme on top.
+                    </p>
+                  </li>
+                  <li className="instructions-list-item c1">
+                    <p className="number">5.</p>
+                    <p>
+                      Bring the pot up to a simmer over medium heat, then lower
+                      the heat and cover with a lid. Leave for ~ 16 minutes or
+                      until rice is cooked through but the grains remain
+                      separate.
+                    </p>
+                  </li>
+                </ol>
+                <h3 className="instructions-subtitle">Mango Sauce</h3>
+                <ol className="instructions-list">
+                  <li className="instructions-list-item c1">
+                    <p className="number">1.</p>
+                    <p>
+                      Chop the mango into chunks and combine all ingredients in
+                      a pan, removing the thyme from the stems. Cook down until
+                      all ingredients are combined and a soft texture. Loosen
+                      with a small amount of water if sticking to the pan.
+                    </p>
+                  </li>
+                  <li className="instructions-list-item c2 ml-1">
+                    <p className="number">2.</p>
+                    <p>
+                      Add everything to a food processor and blend until a
+                      smooth sauce.
+                    </p>
+                  </li>
+                </ol>
+              </div>
+              <p className="final">
+                Serve a generous portion of rice topped with the cauliflower and
+                mango sauce. Some steamed green will go great with this dish and
+                feel free to top with any remaining marinade which also works
+                great as a dipping sauce.
+              </p>
             </div>
           </div>
           {new Array(3).fill(null).map((_, index) => (
